@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -23,7 +23,7 @@ const webpack = require('webpack');
  *
  */
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 /*
  * We've enabled TerserPlugin for you! This minifies your app
@@ -33,66 +33,70 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  *
  */
 
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
-	mode: 'development',
+  mode: 'development',
 
-	entry: {
-		main: './src/main.js',
-		js: './src/js.js',
-		css: './src/css.js'
-	},
+  entry: {
+    main: './src/main.js',
+    js: './src/js.js',
+    css: './src/css.js'
+  },
 
-	plugins: [
-		new webpack.ProgressPlugin(),
-		new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
-	],
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
+    new CleanWebpackPlugin()
+  ],
 
-	module: {
-		rules: [
-			{
-				test: /.css$/,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader
-					},
-					{
-						loader: 'style-loader'
-					},
-					{
-						loader: 'css-loader',
-						options: {
-							sourceMap: true
-						}
-					}
-				]
-			}
-		]
-	},
+  module: {
+    rules: [
+      {
+        test: /.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
+    ]
+  },
 
-	optimization: {
-		minimizer: [new TerserPlugin({
-    })],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          ecma: '2017'
+        }
+      })
+    ],
 
-		splitChunks: {
-			cacheGroups: {
-				vendors: {
-					priority: -10,
-					test: /[\\/]node_modules[\\/]/
-				}
-			},
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          priority: -10,
+          test: /[\\/]node_modules[\\/]/
+        }
+      },
 
-			chunks: 'async',
-			minChunks: 1,
-			minSize: 30000,
-			name: true
-		}
-	},
+      chunks: 'async',
+      minChunks: 1,
+      minSize: 30000,
+      name: true
+    }
+  },
 
-	output: {
-		filename: '[name].bundle.js',
-		library: 'hi',
-		libraryTarget: 'var'
-	}
-};
+  output: {
+    filename: '[name].bundle.js'
+  }
+}
