@@ -1,0 +1,22 @@
+{
+  "name": "cpp-concept-basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "pan93412",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@webpack-cli/init": "^0.3.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "standard": "latest",
+    "style-loader": "^1.1.2",
+    "terser-webpack-plugin": "^2.3.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}
