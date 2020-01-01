@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -46,12 +47,20 @@ module.exports = {
 
   plugins: [
     new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/main.pug',
+      filename: 'main.html'
+    }),
     new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
     new CleanWebpackPlugin()
   ],
 
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
       {
         test: /.css$/,
         use: [
@@ -97,6 +106,6 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].bundle.js'
+    filename: '[name].[chunkhash].js'
   }
 }
