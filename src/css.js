@@ -1,1 +1,2 @@
-console.log("Hello World from css main file!");
+require('bulma/css/bulma.css')
+require('./style/style.css')

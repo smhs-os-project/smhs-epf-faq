@@ -1,0 +1,57 @@
+include includes/header.pug
+include includes/box.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'tutorial'
+    })
+  body
+    +title('教學') //- 連同 title 標籤都會一起設定。
+
+    section.section
+      .container
+        .content
+          p 非常感謝您試用此互動教學程式！
+            | 這裡是幾個你可能會遇到的東西：
+
+          ul
+            li
+              +tip(
+                '假如有不是很重要但值得一看的東西，就會列在這裡！',
+                '<pre>std 是 standard 的簡寫。</pre>'
+              )
+            li
+              +warn(
+                '假如程式碼有小問題，需要你多加留意。',
+                [
+                '<pre>',
+                'cout << "Hi" << endl;',
+                '~~~~            ~~~~',
+                '如果沒加 std:: 或未用',
+                'using namespace std;',
+                '編譯時就會出錯呀！',
+                '</pre>'
+                ].join('\n')
+              )
+            li
+              +danger(
+                '假如程式碼有嚴重問題，或是這重點需要非常注意。',
+                [
+                '<pre>',
+                '#include &lt;iostream&gt;',
+                '         ~~~~~~~~~~',
+                '千萬不要寫成 stdio.h',
+                '     那是 C 的寫法且',
+                '      不相容此教學。',
+                '</pre>'
+                ].join('\n')
+              )
+
+    section.section
+      .container
+        .buttons
+          button.button.is-success#tutorial-understand 了解

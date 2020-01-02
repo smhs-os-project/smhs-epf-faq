@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const pages = require('./src/pages.js')
 /*
  * SplitChunksPlugin is enabled by default and replaced
  * deprecated CommonsChunkPlugin. It automatically identifies modules which
@@ -40,7 +40,6 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    main: './src/main.js',
     js: './src/js.js',
     css: './src/css.js'
   },
@@ -48,11 +47,9 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/main.pug',
-      filename: 'main.html'
-    }),
-    new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
-    new CleanWebpackPlugin()
+      template: 'src/index.pug',
+      filename: 'index.html'
+    })
   ],
 
   module: {
@@ -67,9 +64,9 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          {
-            loader: 'style-loader'
-          },
+          // {
+          //   loader: 'style-loader'
+          // },
           {
             loader: 'css-loader',
             options: {
@@ -109,3 +106,16 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   }
 }
+
+pages.pages.forEach(e => {
+  module.exports.plugins.push(
+    new HtmlWebpackPlugin({
+      template: `src/${e}.pug`,
+      filename: `${e}.html`
+    })
+  )
+})
+module.exports.plugins = module.exports.plugins.concat([
+  new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
+  new CleanWebpackPlugin()
+])

@@ -1,0 +1,30 @@
+include includes/header.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'license'
+    })
+  body
+    +title('歡迎！') //- 連同 title 標籤都會一起設定。
+
+    section.section
+      .container
+        h2.title.is-4 版權資訊
+        .content
+          p 此書中的內容、題目（含解答）、程式碼皆使用 #[i 姓名標示-非商業性-相同方式分享 4.0 國際1] 授權。
+            | 其意味著：
+          ul
+            li 你可#[b 自由分享] — 以任何媒介或格式重製及散布本素材
+            li 你可#[b 自由修改] — 重混、轉換本素材、及依本素材建立新素材
+            li 惟需#[b 姓名標示] — 你必須給予 適當表彰、提供指向本授權條款的連結，以及 指出（本作品的原始版本）是否已被變更。你可以任何合理方式為前述表彰，但不得以任何方式暗示授權人為你或你的使用方式背書。
+            li 惟需#[b 非商業性] — 你不得將本素材進行商業目的之使用。
+            li 惟需#[b 以相同方式分享] — 若你重混、轉換本素材，或依本素材建立新素材，你必須依本素材的授權條款來散布你的貢獻物。
+    
+    section.section
+      .container
+        .buttons
+          button.button.is-success#license-agree-button 同意
