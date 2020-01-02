@@ -1,0 +1,30 @@
+include ../includes/header.pug
+include ../includes/box.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'lesson-1',
+      'data-lesson-id': '1'
+    })
+  body
+    +title('L1: Hello, World!') //- 連同 title 標籤都會一起設定。
+
+    section.section
+      .columns
+        .column
+          .content
+            pre
+              code.cpp.hljs
+                | #include &lt;iostream&gt;
+                | using namespace std;
+                |
+                | int main() {
+                |   cout << "Hello, World!" << endl;  
+                | }
+        .column
+          .content
+            p 這個章節你將學到……
