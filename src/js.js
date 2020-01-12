@@ -32,6 +32,7 @@ $$('.back-top').forEach(e => e.addEventListener('click', () => {
 }))
 
 // includes/header.pug: countdown
+// thanks for https://www.w3schools.com/howto/howto_js_countdown.asp
 const countdown = $$('.countdown')
 const countdownInterval = setInterval(_ => {
   if (countdown == null) clearInterval(countdownInterval)
