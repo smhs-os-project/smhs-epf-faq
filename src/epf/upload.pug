@@ -1,0 +1,41 @@
+include ../includes/header.pug
+include ../includes/box.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'epf-upload'
+    })
+  body
+    +title('上傳') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+
+    section.section
+      .container
+        h2.title.is-2.section-title 我有一堆 hen 棒的作品，我該怎麼上傳？
+        .columns
+          .column
+            h3.title.is-3.step-title Step 1
+            h5.subtitle.is-5.step-subtitle 先去登入。#[a(href='login.html') 怎麼登入？]
+          .column
+            img(src='https://epf.iwebs.tw/assets/epfhighschoolLogin.gif' alt='登入系統')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 2
+            h5.subtitle.is-5.step-subtitle 下拉網頁，按「#[b 上傳學習成果]」。
+          .column
+            img(src='https://epf.iwebs.tw/assets/epfCourseUpload_modal_S2.gif' alt='進入上傳頁面')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 3
+            h5.subtitle.is-5.step-subtitle 按一下要傳的科目（網頁設計太爛，所以你會以為這沒辦法按）#[br]
+              | 然後選檔案後上傳。
+          .column
+            img(src='https://epf.iwebs.tw/assets/epfCourseUpload_modal_S3.gif' alt='然後上傳')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 4
+            h5.subtitle.is-5.step-subtitle 上傳好了唷～去看看#[a(href='upload.html') 怎麼讓老師審核你的學習成果]？

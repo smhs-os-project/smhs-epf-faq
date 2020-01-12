@@ -41,7 +41,8 @@ module.exports = {
 
   entry: {
     js: './src/js.js',
-    css: './src/css.js'
+    css: './src/css.js',
+    file: './src/file.js'
   },
 
   plugins: [
@@ -57,6 +58,10 @@ module.exports = {
       {
         test: /\.pug$/,
         use: 'pug-loader'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: 'file-loader'
       },
       {
         test: /.css$/,

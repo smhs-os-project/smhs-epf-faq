@@ -1,17 +1,19 @@
+meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+
 -
   const navbarItem = {
     '學習歷程檔案': {
-      '登入教學': 'epf/login.html',
-      '上傳教學': 'epf/upload.html',
-      '認證申請教學': 'epf/auth.html'
+      '登入教學': '/epf/login.html',
+      '上傳教學': '/epf/upload.html',
+      '認證申請教學': '/epf/request.html'
     },
     '文件掃描／轉檔': {
-      '掃描教學': 'doc/scan.html',
-      '轉檔教學': 'doc/convert.html',
-      '壓縮 PDF': 'doc/compress_pdf.html'
+      '掃描教學': '/doc/scan.html',
+      '轉檔教學': '/doc/convert.html',
+      '壓縮 PDF': '/doc/compress_pdf.html'
     },
-    '關於': 'about.html',
-    '貢獻／錯誤回報': 'contribute.html'
+    '關於': '/about.html',
+    '貢獻／錯誤回報': '/contribute.html'
   }
 
 mixin title(sectionName)
@@ -19,7 +21,7 @@ mixin title(sectionName)
 
   nav.navbar.web-navbar
     .navbar-brand
-      .navbar-item
+      a.navbar-item(href='/')
         | #[img(src='https://epf.iwebs.tw/assets/smhs_logov2.png' alt='SMHS')] 學習歷程解疑網【#{sectionName}】
       a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-nav-toggle')
         span(aria-hidden='true')

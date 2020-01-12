@@ -1,0 +1,53 @@
+include ../includes/header.pug
+include ../includes/box.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'epf-request'
+    })
+  body
+    +title('請求審核') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+
+    section.section
+      .container
+        h2.title.is-2.section-title 上傳了，然後勒？
+        .columns
+          .column
+            h3.title.is-3.step-title Step 1
+            h5.subtitle.is-5.step-subtitle 記得登入。#[a(href='login.html') 怎麼登入？]
+          .column
+            img(src='https://epf.iwebs.tw/assets/epfhighschoolLogin.gif' alt='登入系統')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 2
+            h5.subtitle.is-5.step-subtitle 下拉網頁，按「#[b 學習成果認證]」。
+              | 找到你要送交認證的檔案後，按下可愛的「#[b 申請認證]」！
+          .column
+            img(src='https://epf.iwebs.tw/assets/epfCourseVerify_modal_S2.gif' alt='認證學習成果')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 3
+            h5.subtitle.is-5.step-subtitle 然後等審核完成吧～ 系統不會主動告訴你
+              | 審核好了沒，你得自己去看。例如我審核成功了，我就會顯示這個視窗：
+          .column
+            img(id='epf-request-step-3-img' alt='審核完成畫面')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 4
+            h5.subtitle.is-5.step-subtitle 然後認證學習成果中會出現這個未讀項，
+              | 像這個範例就是 #[span.request-approved 通過]。#[br]
+              | 確定後按「確認已讀」即可。
+          .column
+            img(id='epf-request-step-4-img' alt='審核完成後認證學習成果畫面')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 5
+            h5.subtitle.is-5.step-subtitle 如果是 #[span.request-disapproved 不通過]，
+              | 就需要去問問老師修改囉！有些老師會寫 #[b 原因]，也可以參考並修改。
+          .column
+            img(id='epf-request-step-5-img' alt='審核失敗後認證學習成果畫面')

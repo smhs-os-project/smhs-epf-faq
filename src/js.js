@@ -26,12 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // includes/header.pug: top button
-const backTopElement = $$('.back-top')[0] // TODO: 改用 forEach
-backTopElement.addEventListener('click', _ => { document.documentElement.scrollTop = 0 })
+$$('.back-top').forEach(e => e.addEventListener('click', () => {
+  document.documentElement.scrollTop = 0
+  document.body.scrollTop = 0
+}))
 
 // includes/header.pug: countdown
 const countdown = $$('.countdown')
 const countdownInterval = setInterval(_ => {
+  if (countdown == null) clearInterval(countdownInterval)
   countdown.forEach(e => {
     const expiredTime = new Date(e.dataset.expired).getTime()
     const now = new Date().getTime()
@@ -50,8 +53,3 @@ const countdownInterval = setInterval(_ => {
     }
   })
 }, 1000)
-backTopElement.addEventListener('click', _ => { document.documentElement.scrollTop = 0 })
-window.addEventListener('scroll', e => {
-  if (document.documentElement.scrollTop <= 100) backTopElement.classList.add('hide')
-  else backTopElement.classList.remove('hide')
-})
