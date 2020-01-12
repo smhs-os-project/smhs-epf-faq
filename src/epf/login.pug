@@ -14,7 +14,8 @@ html
 
     section.section
       .container
-        h2.title.is-2.section-title 我到底該怎麼登入系統ㄋ？
+        h2.title.is-2.section-title #[a#article] 我到底該怎麼登入系統ㄋ？ 
+        h4.subtitle.is-4.section-subtitle 想看影片教學嗎？#[a(href='#video') 點這裡～]
         .columns
           .column
             h3.title.is-3.step-title Step 1
@@ -25,3 +26,21 @@ html
           .column
             h3.title.is-3.step-title Step 2
             h5.subtitle.is-5.step-subtitle 登入好了唷～去看看#[a(href='upload.html') 怎麼上傳學習成果]？
+    section.section
+      .container
+        h3.title.is-3.step-title #[a#video] 影片示範
+        h4.subtitle.is-4.section-subtitle 想看圖文教學嗎？#[a(href='#article') 點這裡～]
+        .columns
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/H1Kla8bVUzI"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            )
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/xHGBTLQ-_94"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            )
