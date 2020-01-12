@@ -48,7 +48,7 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new CopyPlugin([
-      { from: 'assets', to: 'assets' }
+      { from: './src/assets', to: 'assets' }
     ]),
     new HtmlWebpackPlugin({
       template: 'src/index.pug',
