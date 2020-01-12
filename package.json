@@ -1,17 +1,15 @@
 {
-  "name": "cpp-concept-basic",
+  "name": "smhs-epf-faq",
   "version": "1.0.0",
   "main": "index.js",
   "author": "pan93412",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@webpack-cli/init": "^0.3.0",
     "bulma": "^0.8.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.0",
     "file-loader": "^5.0.2",
-    "highlight.js": "^9.17.1",
     "html-webpack-plugin": "^4.0.0-beta.11",
     "mini-css-extract-plugin": "^0.9.0",
     "pug": "^2.0.4",
@@ -20,7 +18,6 @@
     "style-loader": "^1.1.2",
     "terser-webpack-plugin": "^2.3.1",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
