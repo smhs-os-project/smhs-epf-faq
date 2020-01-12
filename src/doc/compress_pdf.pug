@@ -14,7 +14,7 @@ html
 
     section.section
       .container
-        h2.title.is-2.section-title 我要怎麼幫 PDF 減肥？
+        +articleTitle('我要怎麼幫 PDF 減肥？')
         .columns
           .column
             h3.title.is-3.step-title 前提
@@ -58,3 +58,17 @@ html
             h5.subtitle.is-5.step-subtitle 壓完之後，下載走人～～（灑花）
           .column
             img(src='/assets/doc/compress/epfPDFCompressS6.png' alt='下載壓縮後的 PDF')
+    section.section
+      .container
+        +videoTitle
+        .columns
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/sdMU0srziN0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/NwaKWYIiu1o" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )

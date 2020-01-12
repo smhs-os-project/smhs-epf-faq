@@ -14,7 +14,7 @@ html
 
     section.section
       .container
-        h2.title.is-2.section-title 上傳了，然後勒？
+        +articleTitle('上傳了，然後勒？')
         .columns
           .column
             h3.title.is-3.step-title Step 1
@@ -50,3 +50,7 @@ html
               | 就需要去問問老師修改囉！有些老師會寫 #[b.lighter 原因]，也可以參考並修改。
           .column
             img(id='/assets/epf/epf-request-step-5-img.jpg' alt='審核失敗後認證學習成果畫面')
+    section.section
+      .container
+        +videoTitle
+        p 可惜還沒有人拍成影片。

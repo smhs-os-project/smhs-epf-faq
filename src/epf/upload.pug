@@ -14,7 +14,7 @@ html
 
     section.section
       .container
-        h2.title.is-2.section-title 我有一堆 hen 棒的作品，我該怎麼上傳？
+        +articleTitle('我有一堆 hen 棒的作品，我該怎麼上傳？')
         .columns
           .column
             h3.title.is-3.step-title Step 1
@@ -38,3 +38,17 @@ html
           .column
             h3.title.is-3.step-title Step 4
             h5.subtitle.is-5.step-subtitle 上傳好了唷～去看看#[a(href='request.html') 怎麼讓老師審核你的學習成果]？
+    section.section
+      .container
+        +videoTitle
+        .columns
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/TCSjIinsxCE" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/JqYjB2jBTrc" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )

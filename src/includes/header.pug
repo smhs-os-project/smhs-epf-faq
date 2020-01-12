@@ -42,13 +42,6 @@ mixin title(sectionName)
           else
             a.navbar-item(href=val)= key
 
-mixin breadcrumb(bcrumb)
-  nav.breadcrumb(aria-label='breadcrumbs')
-    ul
-      each bcrumbEntry in bcrumb.split('/')
-        li= bcrumbEntry
-        li 你在這裡～
-
 mixin top
   button.button.back-top TOP
   
@@ -56,3 +49,11 @@ mixin countdown(describe, expired)
   .container.countdown-part
     h3.title.is-3= describe
     .countdown(data-expired=expired)
+
+mixin articleTitle(title)
+  h2.title.is-2.section-title #[a#article]#{title}
+  h4.subtitle.is-4.section-subtitle 想看影片教學嗎？#[a(href='#video') 點這裡～]
+
+mixin videoTitle
+  h3.title.is-3.step-title #[a#video] 影片示範
+  h4.subtitle.is-4.section-subtitle 想看圖文教學嗎？#[a(href='#article') 點這裡～]

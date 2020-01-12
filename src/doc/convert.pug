@@ -14,7 +14,7 @@ html
 
     section.section
       .container
-        h2.title.is-2.section-title 我要怎麼把我的 Word 轉成好棒棒的 PDF？
+        +articleTitle('我要怎麼把我的 Word 轉成好棒棒的 PDF？')
         .columns
           .column
             h3.title.is-3.step-title 前提
@@ -58,3 +58,17 @@ html
             h5.subtitle.is-5.step-subtitle 轉完之後，下載走人～～（灑花）
           .column
             img(src='/assets/doc/convert/PDFCompressS6.png' alt='下載壓縮後的 PDF')
+    section.section
+      .container
+        +videoTitle
+        .columns
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/WxeB_g3NZjQ" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )
+          .column
+            iframe(
+              width="560" height="315" src="https://www.youtube.com/embed/G8X8gS1-WhI" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            )
