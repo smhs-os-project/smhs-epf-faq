@@ -25,6 +25,8 @@
 /* 橘化ㄉ navbar */
 .navbar {
   background-color: #ffcc80;
+  position: sticky;
+  top: 0;
 }
 
 /* Section */
@@ -39,16 +41,18 @@
   /* 這樣會變成「|  title」 */
   border-left: 10px solid #ffcc80;
   padding-left: 20px;
+  padding-bottom: 2px;
 }
 
 .subtitle.step-subtitle {
   /* 這樣會變成「  title」 */
   padding-left: 30px;
+  line-height: 1.5;
 }
 
 /* 背景色 */
 html {
-  background-color: #fffde7;
+  background-color: #ffffe5;
 }
 
 /* 通過 & 不通過 */
@@ -68,6 +72,14 @@ html {
 b.lighter {
   border-bottom: 3px solid #c75b39;
   background-color: #eeeeee;
-  padding: 0 2px;
-  margin: 0 2px;
+  padding: 0 3px;
+}
+
+.alert-orange {
+  margin-top: 7px;
+}
+
+/* 好棒棒大頭貼 */
+.avatar {
+  border-radius: 256px;
 }
