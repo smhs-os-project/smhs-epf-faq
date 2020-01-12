@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const pages = require('./src/pages.js')
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -41,12 +42,14 @@ module.exports = {
 
   entry: {
     js: './src/js.js',
-    css: './src/css.js',
-    file: './src/file.js'
+    css: './src/css.js'
   },
 
   plugins: [
     new webpack.ProgressPlugin(),
+    new CopyPlugin([
+      { from: 'assets', to: 'assets' }
+    ]),
     new HtmlWebpackPlugin({
       template: 'src/index.pug',
       filename: 'index.html'
