@@ -1,6 +1,53 @@
+-
+  const navbarItem = {
+    '學習歷程檔案': {
+      '登入教學': 'epf/login.html',
+      '上傳教學': 'epf/upload.html',
+      '認證申請教學': 'epf/auth.html'
+    },
+    '文件掃描／轉檔': {
+      '掃描教學': 'doc/scan.html',
+      '轉檔教學': 'doc/convert.html',
+      '壓縮 PDF': 'doc/compress_pdf.html'
+    },
+    '關於': 'about.html',
+    '貢獻／錯誤回報': 'contribute.html'
+  }
+
 mixin title(sectionName)
-  title C++ Concept Basic [#{sectionName}]
-  section.section
-    .container
-      h2.title.is-large C++ Concept Basic - #{sectionName}
-      h4.subtitle.is-large 中文互動式快速入門 C++。
+  title SMHS 學習歷程解疑網 - [#{sectionName}]
+
+  nav.navbar.web-navbar
+    .navbar-brand
+      .navbar-item
+        | #[img(src='https://epf.iwebs.tw/assets/smhs_logov2.png' alt='SMHS')] 學習歷程解疑網【#{sectionName}】
+      a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-nav-toggle')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+    .navbar-menu#header-nav-toggle
+      .navbar-start
+        each val, key in navbarItem
+          if typeof val === 'object'
+            .navbar-item.has-dropdown.is-hoverable
+              a.navbar-link= key
+              .navbar-dropdown
+                each url, entry in val
+                  a.navbar-item(href=url)= entry
+          else
+            a.navbar-item(href=val)= key
+
+mixin breadcrumb(bcrumb)
+  nav.breadcrumb(aria-label='breadcrumbs')
+    ul
+      each bcrumbEntry in bcrumb.split('/')
+        li= bcrumbEntry
+        li 你在這裡～
+
+mixin top
+  button.button.back-top TOP
+  
+mixin countdown(describe, expired)
+  .container.countdown-part
+    h3.title.is-3= describe
+    .countdown(data-expired=expired)

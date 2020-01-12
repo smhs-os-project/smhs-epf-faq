@@ -1,7 +1,6 @@
 module.exports = {
   pages: [
-    'index', // license page
-    'tutorial', // tutorial page
-    'lesson/1' // Lession 1
+    'index', // Homepage
+    'epf/login' // 學習歷程檔案 - 登入
   ]
 }
