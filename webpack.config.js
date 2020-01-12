@@ -52,7 +52,7 @@ module.exports = {
     ]),
     new HtmlWebpackPlugin({
       template: 'src/index.pug',
-      filename: 'index.html'
+      filename: 'index.php'
     })
   ],
 
@@ -119,7 +119,7 @@ pages.pages.forEach(e => {
   module.exports.plugins.push(
     new HtmlWebpackPlugin({
       template: `src/${e}.pug`,
-      filename: `${e}.html`
+      filename: `${e}.php`
     })
   )
 })
