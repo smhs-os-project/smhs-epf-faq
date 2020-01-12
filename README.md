@@ -1,6 +1,9 @@
 # SMHS 學習歷程解疑網
 ![畫面擷圖](https://user-images.githubusercontent.com/28441561/72222294-0bf60980-359e-11ea-8a73-4656140e8268.png)
 
+## 回報錯誤
+[按一下這裡用 Google 表單回報錯誤](https://docs.google.com/forms/d/e/1FAIpQLScl0RVEabr0uaXxfPfCW_Jlz-Fd9MqUfXe0LXpvyeYW4syqeg/viewform)。當然，你也可以用上面的 GitHub Issues 回報。
+
 ## 編譯說明
 1. 從 Releases 下載 assets.tar.gz
 2. 將上述檔案解壓縮的 `assets` 放在 `src` 資料夾
