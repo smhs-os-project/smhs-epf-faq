@@ -1,0 +1,34 @@
+include includes/header.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+    //- 頁面資訊
+    span#meta&attributes({
+      'data-page-id': 'about'
+    })
+  body
+    +title('關於') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+    .section
+      // pan93412
+      .container
+        .columns
+          .column.about-left.is-4
+            img(src='https://avatars3.githubusercontent.com/u/28441561?s=200&v=4' alt='pan93412 的 icon')
+          .column.content
+            h4.title.is-4 Pan93412
+            p 死肥宅，沒什麼好說。
+            ul
+              li #[a(href='https://github.com/pan93412') GitHub]
+              li #[a(href='https://www.facebook.com/pan93412TW') Facebook]
+              li #[a(href='https://telegram.me/byStarTW_TW') Telegram]
+      // youualan87
+      .container
+        .columns
+          .column.about-left.is-4
+            img(src='https://avatars3.githubusercontent.com/u/28441561?s=200&v=4' alt='pan93412 的 icon')
+          .column.content
+            h4.title.is-4 黃 OO
+            p 這人很懶，什麼都沒寫。

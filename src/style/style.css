@@ -59,3 +59,15 @@ html {
 .request-disapproved {
   color: red;
 }
+
+/* 關於 | 左側列 */
+.about-left {
+  text-align: right;
+}
+
+b.lighter {
+  border-bottom: 3px solid #E56F38;
+  background-color: #D3D3D3;
+  padding: 0 2px;
+  margin: 0 2px;
+}

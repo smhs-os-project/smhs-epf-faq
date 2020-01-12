@@ -1,5 +1,4 @@
 include ../includes/header.pug
-include ../includes/box.pug
 doctype html
 
 html
@@ -25,8 +24,8 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 2
-            h5.subtitle.is-5.step-subtitle 下拉網頁，按「#[b 學習成果認證]」。
-              | 找到你要送交認證的檔案後，按下可愛的「#[b 申請認證]」！
+            h5.subtitle.is-5.step-subtitle 下拉網頁，按「#[b.lighter 學習成果認證]」。
+              | 找到你要送交認證的檔案後，按下可愛的「#[b.lighter 申請認證]」！
           .column
             img(src='https://epf.iwebs.tw/assets/epfCourseVerify_modal_S2.gif' alt='認證學習成果')
         .columns
@@ -48,6 +47,6 @@ html
           .column
             h3.title.is-3.step-title Step 5
             h5.subtitle.is-5.step-subtitle 如果是 #[span.request-disapproved 不通過]，
-              | 就需要去問問老師修改囉！有些老師會寫 #[b 原因]，也可以參考並修改。
+              | 就需要去問問老師修改囉！有些老師會寫 #[b.lighter 原因]，也可以參考並修改。
           .column
             img(id='epf-request-step-5-img' alt='審核失敗後認證學習成果畫面')
