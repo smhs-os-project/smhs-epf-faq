@@ -36,6 +36,11 @@
   padding-left: 15px;
 }
 
+.title.section-subtitle {
+  /* 這樣會變成「   title」 */
+  padding-left: 30px;
+}
+
 /* Step */
 .title.step-title {
   /* 這樣會變成「|  title」 */
