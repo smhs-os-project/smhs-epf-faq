@@ -64,12 +64,6 @@ html
         +videoTitle
         .columns
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/WxeB_g3NZjQ" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            )
+            +embedyt(560, 315, 'WxeB_g3NZjQ')
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/G8X8gS1-WhI" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            )
+            +embedyt(560, 315, 'G8X8gS1-WhI')

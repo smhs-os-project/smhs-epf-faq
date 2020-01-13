@@ -30,15 +30,6 @@ html
         +videoTitle
         .columns
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/H1Kla8bVUzI"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            )
+            +embedyt(560, 315, 'H1Kla8bVUzI')
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/xHGBTLQ-_94"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            )
+            +embedyt(560, 315, 'xHGBTLQ-_94')
