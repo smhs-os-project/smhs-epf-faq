@@ -6,6 +6,12 @@
   z-index: 999;
 }
 
+/* let iframe child containers width
+   equal as parent one. */ 
+.column > iframe {
+  width: 100%;
+}
+
 /* 倒數計時 */
 .countdown {
   background-color: #eeeeee;
