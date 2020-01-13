@@ -41,8 +41,8 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    js: './src/js.js',
-    css: './src/css.js'
+    js: './src/js/js.js',
+    css: './src/js/css.js'
   },
 
   plugins: [
@@ -51,7 +51,7 @@ module.exports = {
       { from: './src/assets', to: 'assets' }
     ]),
     new HtmlWebpackPlugin({
-      template: 'src/index.pug',
+      template: 'src/views/index.pug',
       filename: 'index.html'
     })
   ],
@@ -118,7 +118,7 @@ module.exports = {
 pages.pages.forEach(e => {
   module.exports.plugins.push(
     new HtmlWebpackPlugin({
-      template: `src/${e}.pug`,
+      template: `src/views/${e}.pug`,
       filename: `${e}.html`
     })
   )
