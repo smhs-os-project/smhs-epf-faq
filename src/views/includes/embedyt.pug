@@ -1,0 +1,14 @@
+//-
+  嵌入 YT 影片的程式碼。
+  自己去 YT 影片 - 分享 - 嵌入
+  然後把 width、height 和網址後面的影片 ID 貼進來就好了。
+  
+  網址 ID：
+    假設是 https://www.youtube.com/embed/NwaKWYIiu1o
+    那影片 ID 是 NwaKWYIiu1o
+
+mixin embedyt(width, height, vidid)
+  iframe(
+    width=width height=height src="https://www.youtube.com/embed/" + vidid frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+  )
