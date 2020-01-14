@@ -57,6 +57,12 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
     '其他'
   ]
 
+mixin _addLinks(entry, url)
+  if makeBlank.includes(entry)
+    a.navbar-item.is-blank(href=url)= entry
+  else
+    a.navbar-item(href=url)= entry
+
 mixin title(sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
 
@@ -76,15 +82,9 @@ mixin title(sectionName)
               a.navbar-link= key
               .navbar-dropdown
                 each url, entry in val
-                  if makeBlank.includes(entry)
-                    a.navbar-item.is-blank(href=url)= entry
-                  else
-                    a.navbar-item(href=url)= entry
+                  +_addLinks(entry, url)
           else if !(makeRight.includes(key))
-            if makeBlank.includes(entry)
-              a.navbar-item.is-blank(href=url)= entry
-            else
-              a.navbar-item(href=url)= entry
+            +_addLinks(entry, url)
           //- else 則到 navbar-end
       .navbar-end
         each val, key in navbarItem
@@ -93,7 +93,4 @@ mixin title(sectionName)
               a.navbar-link= key
               .navbar-dropdown.is-right
                 each url, entry in val
-                  if makeBlank.includes(entry)
-                    a.navbar-item.is-blank(href=url)= entry
-                  else
-                    a.navbar-item(href=url)= entry
+                  +_addLinks(entry, url)
