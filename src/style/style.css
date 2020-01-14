@@ -80,10 +80,11 @@ html {
   text-align: right;
 }
 
-b.lighter {
+.highlight {
   border-bottom: 3px solid #c75b39;
   background-color: #eeeeee;
   padding: 0 3px;
+  font-weight: bold;
 }
 
 .alert-orange {
