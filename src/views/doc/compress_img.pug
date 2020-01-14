@@ -18,57 +18,61 @@ html
         .columns
           .column
             h3.title.is-3.step-title 前提
-            h5.subtitle.is-5.step-subtitle 可憐的教育部只給我們 2MB 的空間，而且還只能傳 PDF 呢！#[br]
-              | 不過你知道你的 PDF 有 75% 以上都是#[b.lighter 垃圾資料]嗎？把垃圾資料刪掉就能縮小囉！#[br]
+            h5.subtitle.is-5.step-subtitle 可憐的教育部只給我們 2MB 的空間，而且還只能傳一個檔案呢！#[br]
+              | 不過你知道其實上傳上去的圖片可以大大大大大壓縮嗎？#[br]
+              | 教授其實不會很 Care 你的圖片是不是很細緻，把圖片的畫素少留一點就能縮小囉！#[br]
               | Let's try it!
           .column
             img(src='/assets/doc/compress/epfErrorFileLimit.gif' alt='上傳限制')
         .columns
           .column
             h3.title.is-3.step-title Step 1
-            h5.subtitle.is-5.step-subtitle 去 Google 搜尋 #[code #[a(href='https://google.com.tw/?q=ilovepdf' target='_blank') ilovepdf]]
+            h5.subtitle.is-5.step-subtitle 去 Google 搜尋 #[code #[a(href='https://lmgtfy.com/?q=iloveimg') iloveimg]]
           .column
-            img(src='/assets/doc/searchILovePDF.png' alt='搜尋 ilovepdf')
+            img(src='/assets/doc/searchILoveImg.png' alt='搜尋 iloveimg')
         .columns
           .column
             h3.title.is-3.step-title Step 2
-            h5.subtitle.is-5.step-subtitle 找到 ilovepdf 後點下去。#[br]
-              | 你會看到一堆 PDF 工具，但我們今天是要找 #[b.lighter 壓縮PDF]。
-              | 找到之後按下去！！
+            h5.subtitle.is-5.step-subtitle 找到 iloveimg 後點下去。#[br]
+              | 你會看到一堆圖片工具，但我們今天是要找 #[b.lighter 壓縮單個圖片文檔]。#[br]
+              | 因為網頁敘述怪怪，雖然這網頁寫著「單張」但你可以上傳好幾張，
+              | 所以，你不用管他是「單個」還是「多個」，反正找到後按下去就對了！！！
           .column
-            img(src='/assets/doc/compress/epfPDFCompressS3.gif' alt='按壓縮 PDF')
+            img(src='/assets/doc/compress_img/epfcompressimg2.gif' alt='按「壓縮單個圖片文檔」')
         .columns
           .column
             h3.title.is-3.step-title Step 3
-            h5.subtitle.is-5.step-subtitle 選擇 PDF 後上傳。
+            h5.subtitle.is-5.step-subtitle 把你想壓縮的圖片全部丟上去後按
+              | 「#[b.lighter 壓縮多個圖片文檔]」。#[br]
+              | 如果只有一張就丟一張，有 87 張就丟 87 張，
+              | 選好之後就#[del 坐和放寬]，等他上傳好。
           .column
-            img(src='/assets/doc/compress/epfPDFCompressS4.gif' alt='選擇 PDF')
+            img(src='/assets/doc/compress_img/epfcompressimg3.gif' alt='丟圖片')
         .columns
           .column
             h3.title.is-3.step-title Step 4
-            h5.subtitle.is-5.step-subtitle 選擇 #[b.lighter 壓縮程度]。
-              | 如果檔案很大可以選擇 #[b.lighter 極度壓縮]，
-              | 但平時只需要 #[b.lighter 推薦的壓縮]，弄好之後，
-              | 再點下面的 #[b.lighter 壓縮PDF]。
+            h5.subtitle.is-5.step-subtitle 你看看，是不是被壓出超多垃圾呢？#[br]
+              | 接下來就按 #[b.lighter 下載已壓縮的圖片文檔] 就可以打包下載囉！
+              | 
           .column
-            img(src='/assets/doc/compress/epfPDFCompressS5.gif' alt='壓縮 PDF')
+            img(src='/assets/doc/compress_img/epfcompressimg4.gif' alt='下載圖片')
         .columns
           .column
             h3.title.is-3.step-title Step 5
-            h5.subtitle.is-5.step-subtitle 壓完之後，下載走人～～（灑花）
-          .column
-            img(src='/assets/doc/compress/epfPDFCompressS6.png' alt='下載壓縮後的 PDF')
+            h5.subtitle.is-5.step-subtitle.content 如果你是壓縮多個檔案，還需要「解壓縮」，
+              |
+              ul
+                li Windows 電腦：#[a.is-blank(href='https://blog.xuite.net/yh96301/blog/26572744-7-Zip%E5%A3%93%E7%B8%AE%E8%88%87%E8%A7%A3%E5%A3%93%E7%B8%AE%E6%AA%94%E6%A1%88') 用 7-zip 解壓縮]
+                li macOS 蘋果電腦：#[a.is-blank(href='https://support.apple.com/zh-tw/guide/mac-help/mchlp2528/mac') 內建工具]
+                li GNU/Linux 系統：因系統而異。如果要 CLI，請安裝 #[code p7zip]，而 GUI 的話（例如我自己是 
+                  | #[ruby KDE #[rt 超棒的]]），就是 #[code ark]。
+                li Android 手機：應該都內建解壓縮軟體了。如果沒有，#[del 就去找工具人幫你]。
+                li iOS/iPhone/iPad 蘋果手機：#[a.is-blank(href='https://mrmad.com.tw/ipados-iphone-unzip-and-zip-file-app') 內建工具]
     section.section
       .container
         +videoTitle
         .columns
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/sdMU0srziN0" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            )
+            +embedyt(560, 315, 'FmAUEnKaO6c')
           .column
-            iframe(
-              width="560" height="315" src="https://www.youtube.com/embed/NwaKWYIiu1o" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            )
+            +embedyt(560, 315, 'fz8chtcWHqk')

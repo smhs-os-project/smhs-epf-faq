@@ -54,3 +54,8 @@ const countdownInterval = setInterval(_ => {
     }
   })
 }, 1000)
+
+// views: 自動設定 target='_blank'
+$$('a.is-blank').forEach(e => {
+  e.setAttribute('target', '_blank')
+})

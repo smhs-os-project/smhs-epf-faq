@@ -9,7 +9,7 @@ meta(name='msapplication-navbutton-color' content=themeColor)
 meta(name='apple-mobile-web-app-status-bar-style' content=themeColor)
 
 meta(name='description' content='高雄市立三民高中 SMHS 學習歷程 解疑網，搭配 GIF 動畫圖以及影片示範，包含壓縮檔案、PPT 轉檔、上傳檔案等常見問題，快速上手祕笈～')
-meta(property="og:image" content="https://epf.iwebs.tw/assets/cover/preview/previewV2.png")
+meta(property="og:image" content="https://epf.iwebs.tw/assets/Cover/preview/previewV2.png")
 link(rel="icon" type="image/png" href="https://api.iwebs.tw/1021/clsCDN/INDEX/images/icons/favicon.ico")
 link(rel="Shortcut Icon" type="image/x-icon" href="https://api.iwebs.tw/1021/clsCDN/INDEX/images/icons/favicon.ico")
 meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學")
@@ -28,7 +28,8 @@ script.
     '學習歷程檔案': {
       '登入教學': '/epf/login.html',
       '上傳教學': '/epf/upload.html',
-      '認證申請教學': '/epf/request.html'
+      '認證申請教學': '/epf/request.html',
+      '多元表現說明': '/epf/explain.html'
     },
     '文件掃描／轉檔': {
       '掃描教學': '/doc/scan.html',
@@ -37,13 +38,39 @@ script.
       '壓縮圖片': '/doc/compress_img.html',
       '合併多張圖片': '/doc/concatenate_imgs.html'
     },
-    "其他": {
+    '影音處理': {
+      '壓縮教學（先讀！）': 'https://free.com.tw/youcompress',
+      '影片壓縮': 'https://www.youcompress.com/videos/',
+      '影片製作': 'javascript:alert("不會 Google 嗎？")',
+      '音樂壓縮': 'https://www.youcompress.com/mp3/'
+    },
+    '其他': {
       '關於': '/about.html',
       '網站歷史': 'https://epf.iwebs.tw/pages/History',
       '問題詢問／錯誤回報': 'https://epf.iwebs.tw/pages/Problems',
       '網頁原始碼': 'https://github.com/smhs-os-project/smhs-epf-faq'
     }
   }
+
+  // 要在新視窗開啟的元素。
+  const makeBlank = [
+    '壓縮教學（先讀！）', // 影音處理
+    '影片壓縮', // 影音處理
+    '音樂壓縮', // 影音處理
+    '問題詢問／錯誤回報', // 其他
+    '網頁原始碼' // 其他
+  ]
+
+  // 要擺到右邊的元素。（僅適用於第二層 object 或第一層元素）
+  const makeRight = [
+    '其他'
+  ]
+
+mixin _addLinks(entry, url)
+  if makeBlank.includes(entry)
+    a.navbar-item.is-blank(href=url)= entry
+  else
+    a.navbar-item(href=url)= entry
 
 mixin title(sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
@@ -59,11 +86,20 @@ mixin title(sectionName)
     .navbar-menu#header-nav-toggle
       .navbar-start
         each val, key in navbarItem
-          if typeof val === 'object'
+          if typeof val === 'object' && !(makeRight.includes(key))
             .navbar-item.has-dropdown.is-hoverable
               a.navbar-link= key
               .navbar-dropdown
                 each url, entry in val
-                  a.navbar-item(href=url)= entry
-          else
-            a.navbar-item(href=val)= key
+                  +_addLinks(entry, url)
+          else if !(makeRight.includes(key))
+            +_addLinks(entry, url)
+          //- else 則到 navbar-end
+      .navbar-end
+        each val, key in navbarItem
+          if makeRight.includes(key)
+            .navbar-item.has-dropdown.is-hoverable
+              a.navbar-link= key
+              .navbar-dropdown.is-right
+                each url, entry in val
+                  +_addLinks(entry, url)
