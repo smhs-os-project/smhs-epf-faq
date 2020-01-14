@@ -19,7 +19,8 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
     '學習歷程檔案': {
       '登入教學': '/epf/login.html',
       '上傳教學': '/epf/upload.html',
-      '認證申請教學': '/epf/request.html'
+      '認證申請教學': '/epf/request.html',
+      '多元表現說明': '/epf/explain.html'
     },
     '文件掃描／轉檔': {
       '掃描教學': '/doc/scan.html',
@@ -29,8 +30,10 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
       '合併多張圖片': '/doc/concatenate_imgs.html'
     },
     '影音處理': {
-      '影片壓縮': '/media/compress_video.html',
-      '簡易影片製作': '/media/simple_video.html'
+      '壓縮教學（先讀！）': 'https://free.com.tw/youcompress',
+      '影片壓縮': 'https://www.youcompress.com/videos/',
+      '影片製作': 'javascript:alert("不會 Google 嗎？")',
+      '音樂壓縮': 'https://www.youcompress.com/mp3/'
     },
     '其他': {
       '關於': '/about.html',
@@ -42,9 +45,11 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
 
   // 要在新視窗開啟的元素。
   const makeBlank = [
-    '影片壓縮',
-    '簡易影片製作',
-    '音樂壓縮'
+    '壓縮教學（先讀！）', // 影音處理
+    '影片壓縮', // 影音處理
+    '音樂壓縮', // 影音處理
+    '問題詢問／錯誤回報', // 其他
+    '網頁原始碼' // 其他
   ]
 
   // 要擺到右邊的元素。（僅適用於第二層 object 或第一層元素）
@@ -76,7 +81,10 @@ mixin title(sectionName)
                   else
                     a.navbar-item(href=url)= entry
           else if !(makeRight.includes(key))
-            a.navbar-item(href=val)= key
+            if makeBlank.includes(entry)
+              a.navbar-item.is-blank(href=url)= entry
+            else
+              a.navbar-item(href=url)= entry
           //- else 則到 navbar-end
       .navbar-end
         each val, key in navbarItem
@@ -85,4 +93,7 @@ mixin title(sectionName)
               a.navbar-link= key
               .navbar-dropdown.is-right
                 each url, entry in val
+                  if makeBlank.includes(entry)
+                    a.navbar-item.is-blank(href=url)= entry
+                  else
                     a.navbar-item(href=url)= entry
