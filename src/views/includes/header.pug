@@ -32,13 +32,25 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
       '影片壓縮': '/media/compress_video.html',
       '簡易影片製作': '/media/simple_video.html'
     },
-    "其他": {
+    '其他': {
       '關於': '/about.html',
       '網站歷史': 'https://epf.iwebs.tw/pages/History',
       '問題詢問／錯誤回報': 'https://epf.iwebs.tw/pages/Problems',
       '網頁原始碼': 'https://github.com/smhs-os-project/smhs-epf-faq'
     }
   }
+
+  // 要在新視窗開啟的元素。
+  const makeBlank = [
+    '影片壓縮',
+    '簡易影片製作',
+    '音樂壓縮'
+  ]
+
+  // 要擺到右邊的元素。（僅適用於第二層 object 或第一層元素）
+  const makeRight = [
+    '其他'
+  ]
 
 mixin title(sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
@@ -54,11 +66,23 @@ mixin title(sectionName)
     .navbar-menu#header-nav-toggle
       .navbar-start
         each val, key in navbarItem
-          if typeof val === 'object'
+          if typeof val === 'object' && !(makeRight.includes(key))
             .navbar-item.has-dropdown.is-hoverable
               a.navbar-link= key
               .navbar-dropdown
                 each url, entry in val
-                  a.navbar-item(href=url)= entry
-          else
+                  if makeBlank.includes(entry)
+                    a.navbar-item.is-blank(href=url)= entry
+                  else
+                    a.navbar-item(href=url)= entry
+          else if !(makeRight.includes(key))
             a.navbar-item(href=val)= key
+          //- else 則到 navbar-end
+      .navbar-end
+        each val, key in navbarItem
+          if makeRight.includes(key)
+            .navbar-item.has-dropdown.is-hoverable
+              a.navbar-link= key
+              .navbar-dropdown.is-right
+                each url, entry in val
+                    a.navbar-item(href=url)= entry
