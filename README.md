@@ -5,11 +5,24 @@
 [按一下這裡用 Google 表單回報錯誤](https://docs.google.com/forms/d/e/1FAIpQLScl0RVEabr0uaXxfPfCW_Jlz-Fd9MqUfXe0LXpvyeYW4syqeg/viewform)。當然，你也可以用上面的 GitHub Issues 回報。
 
 ## 編譯說明
-1. 從 Releases 下載 assets.tar.gz
-2. 將上述檔案解壓縮的 `assets` 放在 `src` 資料夾
+### Production
+> 請注意：僅供測試及參考用途，我自己是覺得再建另個實體沒什麼意義啦……
+
+1. 從 Releases 下載 Source Code 和 assets.tar.gz，並解壓縮。
+2. 將 `assets.tar.gz` 解壓縮的 `assets` 放在 Source Code 解壓縮後的 `src` 資料夾
 3. 輸入 `yarn` 安裝依賴
 4. 輸入 `yarn serve:dev` 啟動測試伺服器
-5. 輸入 `yarn build:production` 編譯檔案，檔案會放在 `dist` 資料夾。
+5. 輸入 `yarn build:production` 編譯上線專用檔案，
+   檔案會放在 `dist` 資料夾。
+
+### Development
+1. 複製 (clone) 這個儲存庫的 `production` 分支。
+   `production` 是目前上線版本，會比 Releases 還稍微新一點，
+   但又不會像 `master` 這麼不穩定。
+2. 從 Releases 下載最新版本的 `assets.tar.gz`。
+3. 接下來同 Production。請注意：如果有一些網頁沒有圖片，
+   那應該是我們還沒更新 `assets`，忽略即可。
+4. 改完之後如想發 PR，**請發到 `master` 不是 `production`！**
 
 ## 作者群
 - [pan93412](https://github.com/pan93412)
