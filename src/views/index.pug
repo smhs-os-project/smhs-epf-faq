@@ -11,11 +11,13 @@ html
       'data-page-id': 'home'
     })
   body
-    +title('歡迎！') //- 連同 title 標籤都會一起設定。
-    +top // Back to Top!
+    +title('歡迎！')
+    //- 連同 title 標籤都會一起設定。
+    +top
+    // Back to Top!
 
     .section
-      +countdown('學習歷程上傳截止日', '2020-01-17T00:00:00+08:00')
+      +countdown('學習歷程截止上傳', '2020-01-20T23:59:59+08:00')
 
     .section
       .columns
