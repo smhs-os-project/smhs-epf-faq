@@ -1,8 +1,11 @@
 {
   "name": "smhs-epf-faq",
-  "version": "1.0.99-pre2",
+  "version": "1.0.99-b1",
   "main": "index.js",
-  "author": "pan93412",
+  "author": "pan93412 <pan93412@gmail.com>",
+  "contributors": [
+    "youualan87 <youualan87@gmail.com>"
+  ],
   "license": "MIT",
   "private": true,
   "devDependencies": {

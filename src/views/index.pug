@@ -1,5 +1,7 @@
 include includes/default.include.pug
 include includes/countdown.pug
+//- 公告
+include announcements.pug
 
 doctype html
 
@@ -11,32 +13,16 @@ html
       'data-page-id': 'home'
     })
   body
-    +title('歡迎！') //- 連同 title 標籤都會一起設定。
-    +top // Back to Top!
+    +title('歡迎！')
+    //- 連同 title 標籤都會一起設定。
+    +top
+    // Back to Top!
 
     .section
-      +countdown('學習歷程上傳截止日', '2020-01-17T00:00:00+08:00')
-
+      +countdown('學習歷程截止上傳', '2020-01-20T23:59:59+08:00')
+    
     .section
-      .columns
-        .column
-          .card
-            .card-content
-              h4.title.is-4 問問我要怎麼進去這裡 QAQ
-              p 從 #[a.is-blank(href='http://smhs.kh.edu.tw') 學校首頁] 右側的學習歷程網，
-                | 在上方（手機版是側邊）選單的 #[b.highlight 學習成果製作] 下拉選單中，點選就可以進來了～
-            .card-footer
-              a.card-footer-item.is-blank(href='/assets/indexEntry.jpg') 圖片教學
-        .column
-          .card
-            .card-content
-              h4.title.is-4 欸欸網頁有新的東西，但我的還沒更新欸
-              p 你就多 #[b.highlight 重新整理] 幾次網頁唄，可能是快取問題，然後你就爽歪歪ㄌ
-      .columns
-        .column
-          .card
-            .card-content
-              h4.title.is-4 欸欸原版勒
-              p 設計太亂被判處死刑，這新版面是 #[b.highlight 黃猷珵] 
-                | 跟 #[b.highlight pan93412] 一起製作的。
-        .column
+      h3.title.is-center #這是公告
+      h4.subtitle.is-center 學校有什麼訊息都會放在這喔！
+
+      +announceGenerator
