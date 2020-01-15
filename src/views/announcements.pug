@@ -9,7 +9,7 @@
     格式 FORMAT
       [[{
         'title': '標題',
-        'date': ['年', '月', '日'],
+        'date': [年年年年, 月月, 日日],
         'content': '內文'
       }]]
   */
@@ -20,7 +20,7 @@
     [
       {
         'title': '變更課程學習成果的上傳日',
-        'date': ['2020', '01', '15'],
+        'date': [2020, 01, 15],
         'content': [
           '課程學習成果的上傳日原訂為1月16日，',
           '因學生學習歷程檔案本學期第一次實施上傳，',
@@ -31,16 +31,27 @@
     ]
   ]
 
+//-
+  製作公告卡片
+
+  格式 FORMAT
+    [[{
+      'title': '標題',
+      'date': [年年年年, 月月, 日日],
+      'content': '內文'
+    }]]
+mixin makeAnnounceCard(title, date, content)
+  .card
+    .card-content
+      h4.title.is-4= title
+      h6.subtitle.is-6 #{date[0]}年#{date[1]}月#{date[2]}日
+      p!= content
+
 mixin announceGenerator
   each announceGroup in announces
     .columns
       each announce in announceGroup
         .column
-          .card
-            .card-content
-              h4.title.is-4= announce.title
-              - const dat = announce.date
-              h6.subtitle.is-6 #{dat[0]}年#{dat[1]}月#{dat[2]}日
-              p!= announce.content
+          +makeAnnounceCard(announce.title, announce.date, announce.content)
       if announceGroup.length < 2
         .column
