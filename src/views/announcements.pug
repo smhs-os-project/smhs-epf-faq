@@ -41,6 +41,6 @@ mixin announceGenerator
               h4.title.is-4= announce.title
               - const dat = announce.date
               h6.subtitle.is-6 #{dat[0]}年#{dat[1]}月#{dat[2]}日
-              p= announce.content
+              p!= announce.content
       if announceGroup.length < 2
         .column
