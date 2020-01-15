@@ -95,3 +95,7 @@ html {
 .avatar {
   border-radius: 256px;
 }
+
+.is-center {
+  text-align: center;
+}
