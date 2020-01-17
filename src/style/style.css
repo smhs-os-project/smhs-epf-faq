@@ -48,11 +48,36 @@ html {
   font-weight: bold;
 }
 
-/* header.pug: Header Bar */
+/*
+  header.pug: Header Bar
+  Reference from https://2020election.pts.org.tw/open
+*/
 .navbar {
-  background-color: #ffcc80;
+  /* 255, 204, 128 */
+  background-color: rgba(255, 255, 255, 0.65);
   position: sticky;
   top: 0;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu, .navbar-menu > .navbar-item {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .navbar-page-title {
+    display: none;
+  }
+}
+
+.navbar-dropdown {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-burger:not(.is-active) {
+  border-radius: 0 0 20px 0;
 }
 
 /* top.pug: TOP 按鈕 */
