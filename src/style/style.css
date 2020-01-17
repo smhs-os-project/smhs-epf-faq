@@ -3,12 +3,16 @@
   /* 這樣會變成「|  title」 */
   border-left: 15px solid #ffcc80;
   padding-left: 15px;
+  transform: rotate(-2deg);
+  z-index: -1; /* 防止覆蓋到主元素 */
 }
 
 /* General: Section Subtitle */
-.title.section-subtitle {
+.subtitle.section-subtitle {
   /* 這樣會變成「   title」 */
   padding-left: 30px;
+  transform: rotate(-2deg);
+  z-index: -1; /* 防止覆蓋到主元素 */
 }
 
 /* General: Step Title */
