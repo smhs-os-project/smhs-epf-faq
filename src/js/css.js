@@ -1,3 +1,2 @@
-require('bulma/css/bulma.css')
+require('../style/bulma.scss')
 require('../style/style.scss')
-require('lazyframe/dist/lazyframe.css')
