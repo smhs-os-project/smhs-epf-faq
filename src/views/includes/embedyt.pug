@@ -8,7 +8,7 @@
     那影片 ID 是 NwaKWYIiu1o
 
 mixin embedyt(width, height, vidid)
-  iframe(
-    width=width height=height src="https://www.youtube-nocookie.com/embed/"+vidid frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+  .lazyframe(
+    data-vendor='youtube_nocookie' width=width height=height
+    data-src="https://www.youtube-nocookie.com/embed/"+vidid
   )
