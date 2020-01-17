@@ -48,6 +48,26 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /.s(?:a|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
