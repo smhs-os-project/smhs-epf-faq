@@ -1,4 +1,4 @@
-/* 回到 TOP */
+/* top.pug: TOP 按鈕 */
 .back-top {
   position: fixed;
   right: 20px;
@@ -6,13 +6,13 @@
   z-index: 999;
 }
 
-/* let iframe child containers width
-   equal as parent one. */ 
+/* embedyt.pug: 讓 iframe 子容器寬度
+   等於父容器的。 */
 .column > iframe {
   width: 100%;
 }
 
-/* 倒數計時 */
+/* countdown.pug: 倒數計時器 */
 .countdown {
   background-color: #eeeeee;
   border-radius: 4px;
@@ -24,30 +24,32 @@
   font-family: monospace;
 }
 
+/* countdown.pug: 裝倒數計時器的容器 */
 .countdown-part {
   text-align: center;
 }
 
-/* 橘化ㄉ navbar */
+/* header.pug: Header Bar */
 .navbar {
   background-color: #ffcc80;
   position: sticky;
   top: 0;
 }
 
-/* Section */
+/* General: Section Title */
 .title.section-title {
   /* 這樣會變成「|  title」 */
   border-left: 15px solid #ffcc80;
   padding-left: 15px;
 }
 
+/* General: Section Subtitle */
 .title.section-subtitle {
   /* 這樣會變成「   title」 */
   padding-left: 30px;
 }
 
-/* Step */
+/* General: Step Title */
 .title.step-title {
   /* 這樣會變成「|  title」 */
   border-left: 10px solid #ffcc80;
@@ -55,31 +57,34 @@
   padding-bottom: 2px;
 }
 
+/* General: Step Subtitle */
 .subtitle.step-subtitle {
   /* 這樣會變成「  title」 */
   padding-left: 30px;
   line-height: 1.5;
 }
 
-/* 背景色 */
+/* General: Background Color */
 html {
   background-color: #ffffe5;
 }
 
-/* 通過 & 不通過 */
+/* epf/request.pug: 「通過」文字的顏色 */
 .request-approved {
   color: green;
 }
 
+/* epf/request.pug: 「不通過」文字的顏色 */
 .request-disapproved {
   color: red;
 }
 
-/* 關於 | 左側列 */
+/* epf/about.pug: 關於的左側列 */
 .about-left {
   text-align: right;
 }
 
+/* General: Highlight Text */
 .highlight {
   border-bottom: 3px solid #c75b39;
   background-color: #eeeeee;
@@ -87,15 +92,17 @@ html {
   font-weight: bold;
 }
 
+/* doc/scan.pug: 橘色警示 */
 .alert-orange {
   margin-top: 7px;
 }
 
-/* 好棒棒大頭貼 */
+/* about.pug: 關於頁面的大頭貼 */
 .avatar {
   border-radius: 256px;
 }
 
+/* General: 置中文字 */
 .is-center {
   text-align: center;
 }
