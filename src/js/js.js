@@ -3,7 +3,11 @@
 'use strict'
 
 const { $$ } = require('./libs/query.js')
+const lazyframe = require('lazyframe')
 require('lazysizes') // https://web.dev/codelab-use-lazysizes-to-lazyload-images/
+
+// load YouTube videos lazily
+lazyframe('.lazyframe')
 
 // includes/header.pug: toggle
 // thanks for https://bulma.io/documentation/components/navbar/#navbar-menu
