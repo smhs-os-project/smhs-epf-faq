@@ -112,6 +112,11 @@ module.exports = {
 
   output: {
     filename: '[name].[chunkhash].js'
+  },
+
+  devServer: {
+    port: 50000,
+    compress: true
   }
 }
 
