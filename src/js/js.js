@@ -7,7 +7,11 @@ const lazyframe = require('lazyframe')
 require('lazysizes') // https://web.dev/codelab-use-lazysizes-to-lazyload-images/
 
 // load YouTube videos lazily
-lazyframe('.lazyframe')
+lazyframe('.lazyframe', {
+  // Substitution automatically when bundling.
+  // See README.md for more details.
+  apikey: process.env.ytAPIToken
+})
 
 // includes/header.pug: toggle
 // thanks for https://bulma.io/documentation/components/navbar/#navbar-menu

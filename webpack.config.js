@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const pages = require('./src/pages.js')
+
 /*
  * SplitChunksPlugin is enabled by default and replaced
  * deprecated CommonsChunkPlugin. It automatically identifies modules which
@@ -47,6 +48,9 @@ module.exports = {
 
   plugins: [
     new webpack.ProgressPlugin(),
+    new webpack.EnvironmentPlugin({
+      ytAPIToken: ''
+    }),
     new CopyPlugin([
       { from: './src/assets', to: 'assets' }
     ]),
