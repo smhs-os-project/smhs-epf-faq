@@ -1,3 +1,5 @@
+/* global location, history */
+
 'use strict'
 
 const { $$ } = require('./libs/query.js')
@@ -56,6 +58,24 @@ const countdownInterval = setInterval(_ => {
 }, 1000)
 
 // views: 自動設定 target='_blank'
-$$('a.is-blank').forEach(e => {
-  e.setAttribute('target', '_blank')
-})
+$$('a.is-blank').forEach(e => e.setAttribute('target', '_blank'))
+
+/**
+ * Clean up all the specified track queries.
+ * @author pan93412
+ */
+(function (queries = []) {
+  const url = (new URL(location.href))
+  const urlParams = url.searchParams
+  let isCleaned = 0
+  for (const q of queries) {
+    if (urlParams.has(q)) {
+      isCleaned = 1
+      urlParams.delete(q)
+    }
+  }
+  if (isCleaned) {
+    console.warn('We detected track queries! - removed.')
+    history.pushState({}, '', url.href)
+  }
+})(['fbclid'])
