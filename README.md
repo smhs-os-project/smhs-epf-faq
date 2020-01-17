@@ -11,8 +11,10 @@
 1. 從 Releases 下載 Source Code 和 assets.tar.gz，並解壓縮。
 2. 將 `assets.tar.gz` 解壓縮的 `assets` 放在 Source Code 解壓縮後的 `src` 資料夾
 3. 輸入 `yarn` 安裝依賴
-4. 輸入 `yarn serve:dev` 啟動測試伺服器
-5. 輸入 `yarn build:production` 編譯上線專用檔案，
+4. 先輸入 `export ytAPIToken='YouTube API 憑證'`。
+   lazyframe（延後載入 YouTube 影片的模組）需要 YouTube API 以取得影片的標題及縮圖。YouTube API 憑證可以在[這裡](https://developers.google.com/youtube/v3/getting-started)取得，請務必設定網域及 API 服務範圍限制以防止被濫用。
+5. 輸入 `yarn serve:dev` 啟動測試伺服器
+6. 輸入 `yarn build:production` 編譯上線專用檔案，
    檔案會放在 `dist` 資料夾。
 
 ### Development
