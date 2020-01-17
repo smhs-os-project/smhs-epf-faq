@@ -6,7 +6,7 @@ const { $$ } = require('./libs/query.js')
 const lazyframe = require('lazyframe')
 require('lazysizes') // https://web.dev/codelab-use-lazysizes-to-lazyload-images/
 
-// load YouTube videos lazily
+// includes/embedyt.pug: load YouTube videos lazily
 lazyframe('.lazyframe', {
   // Substitution automatically when bundling.
   // See README.md for more details.
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-// includes/header.pug: top button
+// includes/top.pug: top button
 document.addEventListener('DOMContentLoaded', () => {
   $$('.back-top').forEach(e => e.addEventListener('click', () => {
     document.documentElement.scrollTop = 0
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }))
 })
 
-// includes/header.pug: countdown
+// includes/countdown.pug: countdown
 // thanks for https://www.w3schools.com/howto/howto_js_countdown.asp
 document.addEventListener('DOMContentLoaded', () => {
   const countdown = $$('.countdown')
