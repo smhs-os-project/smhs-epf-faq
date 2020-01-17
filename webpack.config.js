@@ -36,7 +36,7 @@ module.exports = {
         use: 'file-loader'
       },
       {
-        test: /.css$/,
+        test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
@@ -50,7 +50,7 @@ module.exports = {
         ]
       },
       {
-        test: /.s(?:a|c)ss$/,
+        test: /\.s(?:a|c)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
