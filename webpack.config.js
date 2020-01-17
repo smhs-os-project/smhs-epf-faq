@@ -2,17 +2,14 @@ const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const pages = require('./webpack.pages.js')
+const { pages, entries } = require('./webpack.pages.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   mode: 'development',
 
-  entry: {
-    js: './src/js/js.js',
-    css: './src/js/css.js'
-  },
+  entry: entries,
 
   plugins: [
     new webpack.ProgressPlugin(),
@@ -89,14 +86,29 @@ module.exports = {
   }
 }
 
-pages.pages.forEach(e => {
+pages.forEach(e => {
   module.exports.plugins.push(
     new HtmlWebpackPlugin({
-      template: `src/views/${e}.pug`,
-      filename: `${e}.html`
+      template: `src/views/${e.page}.pug`,
+      filename: `${e.page}.html`,
+      chunks: [
+        // CSS 檔案。預設引入。
+        'css',
+        // 在新分頁開啟。預設引入。
+        'blank',
+        // 清除追蹤 query。預設引入。
+        'cleanupQueries',
+        // 開頭列 JS。預設引入。
+        'header',
+        // 延後載入 JS。預設引入。
+        'lazyload',
+        // 回到 TOP 的 JS。預設引入。
+        'top'
+      ].concat(e.chunks)
     })
   )
 })
+
 module.exports.plugins = module.exports.plugins.concat([
   new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
   new CleanWebpackPlugin()
