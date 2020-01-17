@@ -80,6 +80,11 @@ html {
   border-radius: 0 0 20px 0;
 }
 
+/* header.pug: Logo */
+.logo {
+  padding-right: 3px;
+}
+
 /* top.pug: TOP 按鈕 */
 .back-top {
   position: fixed;
