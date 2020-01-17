@@ -4,7 +4,8 @@
   border-left: 15px solid #ffcc80;
   padding-left: 15px;
   transform: rotate(-2deg);
-  z-index: -1; /* 防止覆蓋到主元素 */
+  z-index: -1;
+  /* 防止覆蓋到主元素 */
 }
 
 /* General: Section Subtitle */
@@ -12,7 +13,8 @@
   /* 這樣會變成「   title」 */
   padding-left: 30px;
   transform: rotate(-2deg);
-  z-index: -1; /* 防止覆蓋到主元素 */
+  z-index: -1;
+  /* 防止覆蓋到主元素 */
 }
 
 /* General: Step Title */
@@ -64,9 +66,11 @@ html {
 }
 
 @media screen and (max-width: 1023px) {
-  .navbar-menu, .navbar-menu > .navbar-item {
+  .navbar-menu,
+  .navbar-menu>.navbar-item {
     background-color: rgba(255, 255, 255, 0.8);
   }
+
   .navbar-page-title {
     display: none;
   }
@@ -95,7 +99,7 @@ html {
 
 /* embedyt.pug: 讓 iframe 子容器寬度
    等於父容器的。 */
-.column > iframe {
+.column>iframe {
   width: 100%;
 }
 
