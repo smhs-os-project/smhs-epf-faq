@@ -126,17 +126,17 @@ html {
   color: red;
 }
 
-/* epf/about.pug: 關於的左側列 */
-.about-left {
-  text-align: right;
-}
-
 /* doc/scan.pug: 橘色警示 */
 .alert-orange {
   margin-top: 7px;
 }
 
-/* about.pug: 關於頁面的大頭貼 */
+/* epf/about.pug: 關於的左側列 */
+.about-left {
+  text-align: right;
+}
+
+/* epf/about.pug: 關於頁面的大頭貼 */
 .avatar {
   border-radius: 256px;
 }
