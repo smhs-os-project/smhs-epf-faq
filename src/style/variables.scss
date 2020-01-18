@@ -13,7 +13,7 @@ $section-color: #ffcc80;
 $step-color: $section-color;
 
 // Navbar: Shadow Settings
-$navbar-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+$navbar-box-shadow: 0 2px 5px 0 $main-light-color;
 
 // Countdown: Settings
 $countdown-background-color: $main-color;
