@@ -1,7 +1,10 @@
 mixin countdown(describe, expired)
   .container.countdown-part
     h3.title.is-3.is-center= describe
-    h6.subtitle.is-6.is-center= expired
+    - const exp = new Date(expired)
+    h6.subtitle.is-6.is-center
+      | #{exp.getFullYear()} 年 #{exp.getMonth() + 1} 月 #{exp.getDate()} 日 #[br]
+      | #{exp.getHours()} 時 #{exp.getMinutes()} 分 #{exp.getSeconds()} 秒
     .countdown.is-center(data-expired=expired)
       span.days
         span.num 0
