@@ -2,49 +2,14 @@ const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const pages = require('./src/pages.js')
-
-/*
- * SplitChunksPlugin is enabled by default and replaced
- * deprecated CommonsChunkPlugin. It automatically identifies modules which
- * should be splitted of chunk by heuristics using module duplication count and
- * module category (i. e. node_modules). And splits the chunks…
- *
- * It is safe to remove "splitChunks" from the generated configuration
- * and was added as an educational example.
- *
- * https://webpack.js.org/plugins/split-chunks-plugin/
- *
- */
-
-/*
- * We've enabled MiniCssExtractPlugin for you. This allows your app to
- * use css modules that will be moved into a separate CSS file instead of inside
- * one of your module entries!
- *
- * https://github.com/webpack-contrib/mini-css-extract-plugin
- *
- */
-
+const { pages, entries } = require('./webpack.pages.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
-/*
- * We've enabled TerserPlugin for you! This minifies your app
- * in order to load faster and run less javascript.
- *
- * https://github.com/webpack-contrib/terser-webpack-plugin
- *
- */
-
 const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   mode: 'development',
 
-  entry: {
-    js: './src/js/js.js',
-    css: './src/js/css.js'
-  },
+  entry: entries,
 
   plugins: [
     new webpack.ProgressPlugin(),
@@ -71,14 +36,11 @@ module.exports = {
         use: 'file-loader'
       },
       {
-        test: /.css$/,
+        test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
           },
-          // {
-          //   loader: 'style-loader'
-          // },
           {
             loader: 'css-loader',
             options: {
@@ -86,6 +48,30 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.s(?:a|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.woff(2|)$/,
+        use: 'file-loader'
       }
     ]
   },
@@ -124,14 +110,29 @@ module.exports = {
   }
 }
 
-pages.pages.forEach(e => {
+pages.forEach(e => {
   module.exports.plugins.push(
     new HtmlWebpackPlugin({
-      template: `src/views/${e}.pug`,
-      filename: `${e}.html`
+      template: `src/views/${e.page}.pug`,
+      filename: `${e.page}.html`,
+      chunks: [
+        // CSS 檔案。預設引入。
+        'css',
+        // 在新分頁開啟。預設引入。
+        'blank',
+        // 清除追蹤 query。預設引入。
+        'cleanupQueries',
+        // 開頭列 JS。預設引入。
+        'header',
+        // 延後載入 JS。預設引入。
+        'lazyload',
+        // 回到 TOP 的 JS。預設引入。
+        'top'
+      ].concat(e.chunks)
     })
   )
 })
+
 module.exports.plugins = module.exports.plugins.concat([
   new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
   new CleanWebpackPlugin()

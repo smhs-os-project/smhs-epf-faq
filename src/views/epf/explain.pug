@@ -4,12 +4,8 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    //- 頁面資訊
-    span#meta&attributes({
-      'data-page-id': 'epf-login'
-    })
   body
-    +title('多元表現說明') //- 連同 title 標籤都會一起設定。
+    +title('多元表現說明', '多元表現') //- 連同 title 標籤都會一起設定。
     +top // Back to Top!
 
     section.section
@@ -18,19 +14,19 @@ html
         .columns
           .column
             h3.title.is-3.step-title 多元表現上傳期限？
-            h5.subtitle.is-5.step-subtitle 多元表現為 #[b.highlight 一整學年上傳] 的唷，
+            h5.subtitle.is-5.step-subtitle.content 多元表現為 #[b.highlight 一整學年上傳] 的唷，
               | 不會因為上學期的部分沒傳到，下學期就不能傳！
         .columns
           .column
             h3.title.is-3.step-title 幹部經歷暨事蹟紀錄
-            h5.subtitle.is-5.step-subtitle 你可以 #[b.highlight 自己新增] 你自己好棒棒的豐功偉業！ #[br]
+            h5.subtitle.is-5.step-subtitle.content 你可以 #[b.highlight 自己新增] 你自己好棒棒的豐功偉業！ #[br]
               | 學校幹部則會由校務行政系統同步匯入，不用大爺您操刀新增。 #[br]
           .column
             img.lazyload(data-src='/assets/epf/epfexplain_1.webp' alt='幹部經歷暨事蹟紀錄')
         .columns
           .column
             h3.title.is-3.step-title 競賽參與紀錄
-            h5.subtitle.is-5.step-subtitle 可以把 #[b.highlight 每次競賽的證書]，儘管 #[b.highlight 未得名的出席證明] 也可以
+            h5.subtitle.is-5.step-subtitle.content 可以把 #[b.highlight 每次競賽的證書]，儘管 #[b.highlight 未得名的出席證明] 也可以
               | 上傳上來，這就是歷程！#[br]
               | 快把你超優秀的競賽紀錄都上傳到這裡，讓教授看好看滿ㄅ～
           .column
@@ -38,7 +34,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 檢定證照紀錄
-            h5.subtitle.is-5.step-subtitle 去外面考的 #[b.highlight 檢定證照] 可以上傳上來。#[br]
+            h5.subtitle.is-5.step-subtitle.content 去外面考的 #[b.highlight 檢定證照] 可以上傳上來。#[br]
               | 像是：APCS、GEPT、TOEIC 等等所有有在清單上的證照都收集起來，#[del 集滿100張免費換教授回家唷～]
             img.lazyload(data-src='/assets/epf/epfexplain_3-0.webp' alt='所有證照')
           .column
@@ -46,7 +42,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 志工服務紀錄
-            h5.subtitle.is-5.step-subtitle 你可以 #[b.highlight 自己新增] 你辛苦
+            h5.subtitle.is-5.step-subtitle.content 你可以 #[b.highlight 自己新增] 你辛苦
               | 付出好多心血的 #[b.highlight 志工照片]、 #[b.highlight 志工時數證明] 並
               | #[a(href='/doc/concatenate_imgs') 合併成一個 PDF] 證明文件 #[br]
           .column
@@ -67,7 +63,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 團體活動時間紀錄
-            h5.subtitle.is-5.step-subtitle  學校時常會利用 #[b.highlight 班會時間] 來舉辦
+            h5.subtitle.is-5.step-subtitle.content  學校時常會利用 #[b.highlight 班會時間] 來舉辦
               | #[b.highlight 年級性活動或多元講座]，除此之外，如果您班上有安排活動，
               | 例如 #[b.highlight 電影欣賞、開班會] 等團體活動，都可以將其過程紀錄下來，
               | 並#[a(href='/doc/concatenate_imgs') 把圖片合併成一個 PDF 檔]後再傳上來～#[br]
@@ -84,7 +80,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 作品成果紀錄
-            h5.subtitle.is-5.step-subtitle 當你做了超級驚天動地撼動人心的作品（實體虛擬都行），
+            h5.subtitle.is-5.step-subtitle.content 當你做了超級驚天動地撼動人心的作品（實體虛擬都行），
               | 你就可以把它 #[b.highlight 拍照] 下來或 #[b.highlight 擷圖] 起來，傳上去作品紀錄。
               p 舉例來說：
                 li 擷圖：軟體、網站、繪圖
@@ -94,7 +90,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 其他多元表現紀錄
-            h5.subtitle.is-5.step-subtitle 如果上面的 8 大項分類你都分不出來，就丟這吧！
+            h5.subtitle.is-5.step-subtitle.content 如果上面的 8 大項分類你都分不出來，就丟這吧！
           .column
             img.lazyload(data-src='/assets/epf/epfexplain_9.webp' alt='其他多元表現紀錄')
     section.section

@@ -4,10 +4,6 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    //- 頁面資訊
-    span#meta&attributes({
-      'data-page-id': 'doc-compress-pdf'
-    })
   body
     +title('壓縮 PDF') //- 連同 title 標籤都會一起設定。
     +top // Back to Top!
@@ -18,7 +14,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title 前提
-            h5.subtitle.is-5.step-subtitle 可憐的教育部只給我們 2MB 的空間，而且還只能傳 PDF 呢！#[br]
+            h5.subtitle.is-5.step-subtitle.content 可憐的教育部只給我們 2MB 的空間，而且還只能傳 PDF 呢！#[br]
               | 不過你知道你的 PDF 有 75% 以上都是#[b.highlight 垃圾資料]嗎？把垃圾資料刪掉就能縮小囉！#[br]
               | Let's try it!
           .column
@@ -26,13 +22,13 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 1
-            h5.subtitle.is-5.step-subtitle 去 Google 搜尋 #[code #[a(href='https://lmgtfy.com/?q=ilovepdf') ilovepdf]]
+            h5.subtitle.is-5.step-subtitle.content 去 Google 搜尋 #[code #[a.is-blank(href='https://lmgtfy.com/?q=ilovepdf') ilovepdf]]
           .column
             img.lazyload(data-src='/assets/doc/searchILovePDF.webp' alt='搜尋 ilovepdf')
         .columns
           .column
             h3.title.is-3.step-title Step 2
-            h5.subtitle.is-5.step-subtitle 找到 ilovepdf 後點下去。#[br]
+            h5.subtitle.is-5.step-subtitle.content 找到 ilovepdf 後點下去。#[br]
               | 你會看到一堆 PDF 工具，但我們今天是要找 #[b.highlight 壓縮PDF]。
               | 找到之後按下去！！
           .column
@@ -40,13 +36,13 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 3
-            h5.subtitle.is-5.step-subtitle 選擇 PDF 後上傳。
+            h5.subtitle.is-5.step-subtitle.content 選擇 PDF 後上傳。
           .column
             img.lazyload(data-src='/assets/doc/compress/epfPDFCompressS4.gif' alt='選擇 PDF')
         .columns
           .column
             h3.title.is-3.step-title Step 4
-            h5.subtitle.is-5.step-subtitle 選擇 #[b.highlight 壓縮程度]。
+            h5.subtitle.is-5.step-subtitle.content 選擇 #[b.highlight 壓縮程度]。
               | 如果檔案很大可以選擇 #[b.highlight 極度壓縮]，
               | 但平時只需要 #[b.highlight 推薦的壓縮]，弄好之後，
               | 再點下面的 #[b.highlight 壓縮PDF]。
@@ -55,7 +51,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 5
-            h5.subtitle.is-5.step-subtitle 壓完之後，下載走人～～（灑花）
+            h5.subtitle.is-5.step-subtitle.content 壓完之後，下載走人～～（灑花）
           .column
             img.lazyload(data-src='/assets/doc/compress/epfPDFCompressS6.webp' alt='下載壓縮後的 PDF')
     section.section

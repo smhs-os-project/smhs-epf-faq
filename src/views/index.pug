@@ -8,21 +8,20 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    //- 頁面資訊
-    span#meta&attributes({
-      'data-page-id': 'home'
-    })
   body
-    +title('歡迎！')
+    +title('歡迎！', '歡迎')
     //- 連同 title 標籤都會一起設定。
     +top
     // Back to Top!
 
     .section
-      +countdown('學習歷程截止上傳', '2020-01-20T23:59:59+08:00')
-    
-    .section
-      h3.title.is-center #這是公告
-      h4.subtitle.is-center 學校有什麼訊息都會放在這喔！
+      .container
+        .columns
+          .column.is-3
+            +countdown('學習歷程截止上傳', '2020-01-20T23:59:59+08:00')
+          .column.is-9
+            .container
+              h3.title.is-center 公告區
+              h4.subtitle.is-center 學校有什麼訊息都會放在這喔！
 
-      +announceGenerator
+              +announceGenerator

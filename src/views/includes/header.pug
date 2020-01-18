@@ -73,13 +73,24 @@ mixin _addLinks(entry, url)
   else
     a.navbar-item(href=url)= entry
 
-mixin title(sectionName)
+//-
+  設定標題。
+
+  @param {string} sectionName 區段標題。會寫在 <title>，可以長一點。
+  @param {string} shortName   簡要標題。會用在開頭列。
+                              因為寬度不夠，所以請寫短一點。
+                              （盡可能 6 個字以內，最好 2-4 個字）
+                              預設值：${sectionName}
+
+  設定範例 SETTING EXAMPLES
+      +title('Word/PPT 轉檔', '文件轉檔')
+mixin title(sectionName, shortName = sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
 
   nav.navbar.web-navbar
     .navbar-brand
       a.navbar-item(href='/')
-        | #[img.lazyload(data-src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網【#{sectionName}】
+        | #[img.logo(src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網#[span.navbar-page-title 【#{shortName}】]
       a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-nav-toggle')
         span(aria-hidden='true')
         span(aria-hidden='true')

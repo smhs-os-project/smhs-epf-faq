@@ -4,10 +4,6 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    //- 頁面資訊
-    span#meta&attributes({
-      'data-page-id': 'doc-compress-pdf'
-    })
   body
     +title('文件掃描') //- 連同 title 標籤都會一起設定。
     +top // Back to Top!
@@ -18,29 +14,28 @@ html
         .columns
           .column
             h3.title.is-3.step-title 前提
-            h5.subtitle.is-5.step-subtitle 齁唷， #[b.highlight 學習單]想上傳上去，但 #[b.highlight 拍照都會有陰影]，而且 #[b.highlight 肥肥的圖片檔] 
-              | 還可能傳不上去QQ#[br]
+            h5.subtitle.is-5.step-subtitle.content 齁唷， #[b.highlight 學習單]想上傳上去，但 #[b.highlight 拍照都會有陰影]，而且 #[b.highlight 肥肥的圖片檔]
+              |  還可能傳不上去QQ#[br]
               | 幸好學校有提供 #[b.highlight 學生用事務機]，可以讓可憐的我們拿去掃描，一起來看看怎麼用吧（幫QQ #[br]
               .notification.is-warning.alert-orange
                 .container
                   | 需自備 1張 #[b 至少8元的悠遊卡]
-                
         .columns
           .column
             h3.title.is-3.step-title Step 1
-            h5.subtitle.is-5.step-subtitle 到本校 #[b.highlight 3F創藝數位園地]
+            h5.subtitle.is-5.step-subtitle.content 到本校 #[b.highlight 3F創藝數位園地]
           .column
             img.lazyload(data-src='/assets/doc/scanner/smhs_3F.webp' alt='到3F創藝數位園地')
         .columns
           .column
             h3.title.is-3.step-title Step 2
-            h5.subtitle.is-5.step-subtitle 從北棟門進去後，靠 #[b.highlight 右手邊] 會有一台學生用事務機
+            h5.subtitle.is-5.step-subtitle.content 從北棟門進去後，靠 #[b.highlight 右手邊] 會有一台學生用事務機
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_001.webp' alt='在右手邊有學生用事物機')
         .columns
           .column
             h3.title.is-3.step-title Step 3
-            h5.subtitle.is-5.step-subtitle 將你那可愛的悠遊卡插進 #[b.highlight 在事務機旁的讀卡機]#[br]
+            h5.subtitle.is-5.step-subtitle.content 將你那可愛的悠遊卡插進 #[b.highlight 在事務機旁的讀卡機]#[br]
               | 請注意，#[b 是悠遊卡，是悠遊卡，是悠遊卡，不是學生證，更不是一卡通！！！](#ﾒ`皿´)ﾒ#[br]
               | 喔對，#[b.highlight 掃描不會扣錢，只需要一張至少 8 元的悠遊卡！]
           .column
@@ -48,23 +43,23 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 4
-            h5.subtitle.is-5.step-subtitle 插入悠遊卡並讀取成功後，即可開始操作（往下看往下看～）
+            h5.subtitle.is-5.step-subtitle.content 插入悠遊卡並讀取成功後，即可開始操作（往下看往下看～）
         .columns
           .column
             h3.title.is-3.step-title Step 5
-            h5.subtitle.is-5.step-subtitle 點 事務機面板 的 #[b.highlight 影像傳送]
+            h5.subtitle.is-5.step-subtitle.content 點 事務機面板 的 #[b.highlight 影像傳送]
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_003.webp' alt='按面板上的影像傳送')
         .columns
           .column
             h3.title.is-3.step-title Step 6
-            h5.subtitle.is-5.step-subtitle 然後再點 #[b.highlight USB 記憶掃描]
+            h5.subtitle.is-5.step-subtitle.content 然後再點 #[b.highlight USB 記憶掃描]
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_004.webp' alt='按選單的 USD記憶掃描')
         .columns
           .column
             h3.title.is-3.step-title Step 7
-            h5.subtitle.is-5.step-subtitle 這時在印表機控制台的 #[b.highlight 右下角] 插入你的 #[b.highlight 隨身碟 USB]
+            h5.subtitle.is-5.step-subtitle.content 這時在印表機控制台的 #[b.highlight 右下角] 插入你的 #[b.highlight 隨身碟 USB]
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_005.webp' alt='找到右下角')
           .column
@@ -72,7 +67,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 8
-            h5.subtitle.is-5.step-subtitle 插入隨身碟後，回到面板，可以 #[b.highlight 調整掃描影像的解析度]
+            h5.subtitle.is-5.step-subtitle.content 插入隨身碟後，回到面板，可以 #[b.highlight 調整掃描影像的解析度]
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_007.webp' alt='點「解析度」')
           .column
@@ -80,7 +75,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title #[a#step9] Step 9
-            h5.subtitle.is-5.step-subtitle 設定完後，拉起 #[b.highlight 遮光蓋] (就是圖中箭頭指的那個)#[br]
+            h5.subtitle.is-5.step-subtitle.content 設定完後，拉起 #[b.highlight 遮光蓋] (就是圖中箭頭指的那個)#[br]
               | 然後把你的 #[u 原稿] 蓋在玻璃面上（正面朝下）
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_009.webp' alt='拉起遮光蓋')
@@ -89,20 +84,20 @@ html
         .columns
           .column
             h3.title.is-3.step-title Step 10
-            h5.subtitle.is-5.step-subtitle 然後把 #[b.highlight 遮光蓋] 蓋起來，準備好開始掃描啦！！
+            h5.subtitle.is-5.step-subtitle.content 然後把 #[b.highlight 遮光蓋] 蓋起來，準備好開始掃描啦！！
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_011.webp' alt='蓋上遮光蓋，開始掃描啦')
         .columns
           .column
             h3.title.is-3.step-title #[a#step11]Step 11
-            h5.subtitle.is-5.step-subtitle 這時在印表機控制台的 #[b.highlight 右下角] 按下這顆按鈕：#[br]
+            h5.subtitle.is-5.step-subtitle.content 這時在印表機控制台的 #[b.highlight 右下角] 按下這顆按鈕：#[br]
               img.lazyload(data-src='/assets/doc/scanner/Scanner_012-0.webp' alt='開始執行鍵' style='margin: 6px')
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_012.webp' alt='按 開始鍵')
         .columns
           .column
             h3.title.is-3.step-title Step 12
-            h5.subtitle.is-5.step-subtitle 正面掃描好就可以掃描下一頁 #[br]
+            h5.subtitle.is-5.step-subtitle.content 正面掃描好就可以掃描下一頁 #[br]
               | 把 #[b.highlight 遮光蓋] 掀起來，再換面繼續 #[a(href='#step9') Step9] ～ #[a(href='#step11') Step11]
             +embedyt(480, 360, 'YqQREVgbSTs')
           .column
@@ -111,13 +106,13 @@ html
         .columns
           .column
             h3.title.is-3.step-title #[a#step13]Step 13
-            h5.subtitle.is-5.step-subtitle 最後掃描完成他會問是否結束本次工作，就按 #[b.highlight 讀取結束]
+            h5.subtitle.is-5.step-subtitle.content 最後掃描完成他會問是否結束本次工作，就按 #[b.highlight 讀取結束]
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_017.webp' alt='按 讀取結束')
         .columns
           .column
             h3.title.is-3.step-title #[a#step11]Step 14
-            h5.subtitle.is-5.step-subtitle 然後就會開始存檔，別急～
+            h5.subtitle.is-5.step-subtitle.content 然後就會開始存檔，別急～
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_018.webp' alt='儲存中')
           .column
@@ -125,7 +120,7 @@ html
         .columns
           .column
             h3.title.is-3.step-title #[a#step11]Step 15
-            h5.subtitle.is-5.step-subtitle 最後記得將 #[b.highlight 文件原稿]、#[b.highlight 隨身碟 USB] 取下拔走～～
+            h5.subtitle.is-5.step-subtitle.content 最後記得將 #[b.highlight 文件原稿]、#[b.highlight 隨身碟 USB] 取下拔走～～
           .column
             img.lazyload(data-src='/assets/doc/scanner/Scanner_020.webp' alt='東西都給我拿走＠＠')
     section.section
