@@ -1,9 +1,9 @@
 @import 'variables.scss';
 
 // bulma: navbar
-$navbar-background-color: $main-color;
-$navbar-item-hover-background-color: $main-dark-color;
-$navbar-dropdown-background-color: $main-color;
-$navbar-dropdown-item-hover-background-color: $main-dark-color;
+$navbar-background-color: $navbar-main-color;
+$navbar-item-hover-background-color: $navbar-hover-color;
+$navbar-dropdown-background-color: $navbar-main-color;
+$navbar-dropdown-item-hover-background-color: $navbar-hover-color;
 
 @import '~bulma/bulma'
