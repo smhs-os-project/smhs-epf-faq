@@ -1,5 +1,5 @@
 # SMHS 學習歷程解疑網
-![畫面擷圖](https://user-images.githubusercontent.com/28441561/72222294-0bf60980-359e-11ea-8a73-4656140e8268.png)
+![畫面擷圖](https://user-images.githubusercontent.com/28441561/72662060-f7da5e00-3a1c-11ea-855a-20ac446c5da0.png)
 
 ## 回報錯誤
 [按一下這裡用 Google 表單回報錯誤](https://docs.google.com/forms/d/e/1FAIpQLScl0RVEabr0uaXxfPfCW_Jlz-Fd9MqUfXe0LXpvyeYW4syqeg/viewform)。當然，你也可以用上面的 GitHub Issues 回報。
