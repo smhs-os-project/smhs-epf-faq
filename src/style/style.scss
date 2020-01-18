@@ -121,14 +121,6 @@ html {
 .countdown > span.seconds {
   font-size: 80%;
 }
-/* countdown.pug: 裝倒數計時器的容器 */
-.countdown-part {
-  // background-color: $countdown-background-color;
-  color: $countdown-text-color;
-  border-radius: 4px;
-  text-align: left;
-  padding: 5px 7px;
-}
 
 /* epf/request.pug: 「通過」文字的顏色 */
 .request-approved {
