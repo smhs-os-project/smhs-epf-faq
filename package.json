@@ -4,7 +4,9 @@
   "main": "index.js",
   "author": "pan93412 <pan93412@gmail.com>",
   "contributors": [
-    "youualan87 <youualan87@gmail.com>"
+    "youualan87 <youualan87@gmail.com>",
+    "hugwalk <extended.wl@gmail.com>",
+    "mochaaP <self@mochaa.ws>"
   ],
   "license": "MIT",
   "private": true,
