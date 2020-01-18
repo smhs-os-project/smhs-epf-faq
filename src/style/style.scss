@@ -60,7 +60,6 @@ html {
   position: sticky;
   top: 0;
   margin: 0 auto;
-  width: 80%;
   border-radius: 0 0 20px 20px;
   box-shadow: $navbar-box-shadow;
 }
@@ -104,22 +103,6 @@ html {
 
 .countdown sub {
   font-size: 40%;
-}
-
-.countdown > span.days {
-  font-size: 160%;
-}
-
-.countdown > span.hours {
-  font-size: 130%;
-}
-
-.countdown > span.minutes {
-  font-size: 100%;
-}
-
-.countdown > span.seconds {
-  font-size: 80%;
 }
 
 /* epf/request.pug: 「通過」文字的顏色 */
