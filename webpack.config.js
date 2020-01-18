@@ -68,6 +68,10 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.woff(2|)$/,
+        use: 'file-loader'
       }
     ]
   },
