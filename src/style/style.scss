@@ -105,6 +105,11 @@ html {
   font-size: 40%;
 }
 
+/* countdown.pug: 倒數計時器的外層通知 */
+.countdown-part {
+  position: fixed; left: 0; bottom: 0; width: 20rem; margin: 3rem;
+  z-index: 50;
+}
 /* epf/request.pug: 「通過」文字的顏色 */
 .request-approved {
   color: green;

@@ -6,4 +6,7 @@ $navbar-item-hover-background-color: $navbar-hover-color;
 $navbar-dropdown-background-color: $navbar-main-color;
 $navbar-dropdown-item-hover-background-color: $navbar-hover-color;
 
+// bulma: notification
+$notification-background-color: $navbar-background-color; /* TODO: separate option */
+
 @import '~bulma/bulma'
