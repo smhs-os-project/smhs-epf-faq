@@ -1,10 +1,12 @@
+@import 'variables.scss';
+
 // bulma: navbar
-$navbar-background-color: rgba(255, 204, 128, 0.65);
-$navbar-item-hover-background-color: #c88719;
-$navbar-dropdown-background-color: rgba(255, 204, 128, 0.65);
-$navbar-dropdown-item-hover-background-color: #c88719;
+$navbar-background-color: $main-color;
+$navbar-item-hover-background-color: $main-dark-color;
+$navbar-dropdown-background-color: $main-color;
+$navbar-dropdown-item-hover-background-color: $main-dark-color;
 
 // bulma: card
-$card-background-color: #ffffe5;
+$card-background-color: $main-light-color;
 
 @import '~bulma/bulma'
