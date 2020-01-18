@@ -1,0 +1,50 @@
+include ../includes/article.include.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+  body
+    +title('新增申請學校', '新增校系') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+
+    section.section
+      .container
+        +articleTitle('終於到了要申請學校的重要關頭！要怎麼申請校系啊？')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 1
+            h5.subtitle.is-5.step-subtitle.content 先去登入。#[a(href='/epf/login.html') 怎麼登入？]
+          .column
+            img.lazyload(data-src='/assets/epf/epfhighschoolLogin.gif' alt='登入系統')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 2
+            h5.subtitle.is-5.step-subtitle.content 在上方模式選單找到 #[b.highlight 申請學校] ，#[del 然後給它重擊]
+          .column
+            img.lazyload(data-src='/assets/school/epfschool_add_s2.gif' alt='在模式選單點申請學校')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 3
+            h5.subtitle.is-5.step-subtitle.content 下拉網頁，按 #[b.highlight 新增申請學校]
+          .column
+            img.lazyload(data-src='/assets/school/epfschool_add_s3.gif' alt='按申請學校')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 4
+            h5.subtitle.is-5.step-subtitle.content 再下拉網頁， 開始 #[b.highlight 新增要申請的校系]#[br]
+              | 依序選取 #[b.highlight 學校] > #[b.highlight 校系] > #[b.highlight 備審項目](可由學則帶入)
+          .column
+            img.lazyload(data-src='/assets/school/epfschool_add_s4.gif' alt='新增申請的校系')
+        .columns
+          .column
+            h3.title.is-3.step-title Step 5
+            h5.subtitle.is-5.step-subtitle.content 新增好了唷～去看看#[a(href='manage_data.html') 怎麼管理與新增備審資料]？
+    section.section
+      .container
+        +videoTitle
+        .columns
+          .column
+            +embedyt(560, 315, 'L5UUmUMijpc')
+          .column
+            +embedyt(560, 315, '') //-wait
