@@ -1,4 +1,17 @@
 mixin countdown(describe, expired)
   .container.countdown-part
-    h3.title.is-3= describe
-    .countdown(data-expired=expired) 計算中……
+    h3.title.is-3.is-center= describe
+    h6.subtitle.is-6.is-center= expired
+    .countdown.is-center(data-expired=expired)
+      span.days
+        span.num 0
+        sub d
+      span.hours
+        span.num 0
+        sub h
+      span.minutes
+        span.num 0
+        sub m
+      span.seconds
+        span.num 0
+        sub s
