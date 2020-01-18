@@ -1,0 +1,20 @@
+// General: Color Settings
+$background-color: #ffffe5;
+$main-color: rgba(255, 204, 128, 0.65);
+$main-light-color: #ffe97d;
+$main-dark-color: #c88719;
+
+// Highlight: Color Settings
+$highlight-bg-color: #eeeeee;
+$highliht-underline-color: $main-dark-color;
+
+// Step & Section: Color Settings
+$section-color: #ffcc80;
+$step-color: $section-color;
+
+// Navbar: Shadow Settings
+$navbar-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+
+// Countdown: Settings
+$countdown-background-color: $main-color;
+$countdown-text-color: $main-dark-color;
