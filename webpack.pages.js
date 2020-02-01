@@ -35,6 +35,9 @@ module.exports = {
     { page: 'doc/compress_img' }, // 文件掃描／轉檔 - 壓縮圖片
     { page: 'doc/concatenate_imgs' }, // 文件掃描／轉檔 - 合併多張圖片
     { page: 'doc/convert' }, // 文件掃描／轉檔 - Word/PPT 轉檔
-    { page: 'doc/scan' } // 文件掃描／轉檔 - 文件掃描
+    { page: 'doc/scan' }, // 文件掃描／轉檔 - 文件掃描
+    { page: 'school/add' }, // 申請學校 - 新增學校
+    { page: 'school/manage_data' } // 申請學校 - 管理備審資料
+    // { page: 'school/manage_works' } // 申請學校 - 管理成品區
   ]
 }
