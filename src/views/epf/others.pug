@@ -1,0 +1,61 @@
+include ../includes/article.include.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+  body
+    +title('其他資料用處', '其他資料') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+
+    section.section
+      .container
+        +articleTitle('網站最下面有個其他提交，那幹嘛用的啊？')
+        .columns
+          .column
+            h3.title.is-3.step-title 前提
+            h5.subtitle.is-5.step-subtitle.content 在網站最下面有一區是 #[b.highlight 不用每學期提交的其他類]#[br]
+              | 但都不知道那區可以做什麼吧，往下滑繼續看下去～
+          .column
+            img.lazyload(data-src='/assets/epf/epfothers_1.png' alt='其他項目')
+        .columns
+          .column
+            h3.title.is-3.step-title 我要上傳資料區 上傳資料
+            h5.subtitle.is-5.step-subtitle.content #[b.highlight 自傳、學習計畫、心理測驗、健康狀況資料、小論文資料、體適能資料、大學端需求] 
+              | 都是歸類在這一種上傳模式唷！#[br]
+              | 上傳流程請看附圖！#[br]
+              .notification.is-warning.is-light.alert-orange
+                .container
+                  | 文件檔案一樣 #[b.highlight 不可以超過 5MB] 唷！
+          .column
+            img.lazyload(data-src='/assets/epf/epfothers_upload1.png' alt='上傳資料')
+        .columns
+          .column
+            h3.title.is-3.step-title 我要上傳資料區 移動資料分類
+            h5.subtitle.is-5.step-subtitle.content 上述 #[b.highlight 自傳、學習計畫、心理測驗、健康狀況資料、小論文資料、體適能資料、大學端需求] 
+              | 因為是歸類在同一類型，所以資料可以互相移動分類#[br]
+          .column
+            img.lazyload(data-src='/assets/epf/epfothers_upload2.gif' alt='移動資料分類')
+        .columns
+          .column
+            h3.title.is-3.step-title 我要上傳資料區 移動資料排序
+            h5.subtitle.is-5.step-subtitle.content 因為上傳的檔案超超超超超級多多多，所以可以把檔案清單排好排滿啦！#[br]
+              | 其實就只是排爽的而已，沒人在乎你要怎麼排，自己好看就好 ：）
+          .column
+            img.lazyload(data-src='/assets/epf/epfothers_upload3.gif' alt='排序資料清單')
+        .columns
+          .column
+            h3.title.is-3.step-title 自主學習計畫上傳區
+            h5.subtitle.is-5.step-subtitle.content 在這裡可以將你的學習計畫上傳上來，並且必須經過老師認可，
+              | 這個有助於你未來 #[a(href='/school/add.html') 申請校系] 上使用#[br]
+              | 提交認證申請可以參考 #[a(href='request.html').is-blank 學科認證申請] ，步驟差不多，進入認證的泡泡按鈕就在他的隔壁
+          .column
+            img.lazyload(data-src='/assets/epf/epfothers_self1.png' alt='幹部經歷暨事蹟紀錄')
+        .columns
+          .column
+            h3.title.is-3.step-title 檔案搞定了！
+            h5.subtitle.is-5.step-subtitle.content 新增完了唷～去看看#[a(href='/school/manage_data.html') 這些資料會用在哪裡]吧？
+    section.section
+      .container
+        +videoTitle
+        p 可惜還沒有人拍成影片。
