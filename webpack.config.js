@@ -77,8 +77,8 @@ module.exports = {
         test: /\.woff(2|)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'assets/others',
-          publicPath: '/assets/others'
+          outputPath: 'epf/assets/others/fonts',
+          publicPath: '/epf/assets/others/fonts'
         }
       }
     ]
