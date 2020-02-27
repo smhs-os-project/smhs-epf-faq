@@ -71,7 +71,10 @@ module.exports = {
       },
       {
         test: /\.woff(2|)$/,
-        use: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/others'
+        }
       }
     ]
   },
@@ -101,12 +104,13 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].[chunkhash].js'
+    filename: 'assets/js/[name].[chunkhash].js'
   },
 
   devServer: {
     port: 50000,
-    compress: true
+    compress: true,
+    publicPath: '/'
   }
 }
 
@@ -134,6 +138,6 @@ pages.forEach(e => {
 })
 
 module.exports.plugins = module.exports.plugins.concat([
-  new MiniCssExtractPlugin({ filename: 'css.[chunkhash].css' }),
+  new MiniCssExtractPlugin({ filename: 'assets/css/[name].[chunkhash].css' }),
   new CleanWebpackPlugin()
 ])
