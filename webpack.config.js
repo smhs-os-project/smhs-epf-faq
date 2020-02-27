@@ -33,7 +33,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/others',
+          publicPath: '/assets/others'
+        }
       },
       {
         test: /\.css$/,
@@ -73,7 +77,8 @@ module.exports = {
         test: /\.woff(2|)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'assets/others'
+          outputPath: 'assets/others',
+          publicPath: '/assets/others'
         }
       }
     ]
