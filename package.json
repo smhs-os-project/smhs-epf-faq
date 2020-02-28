@@ -1,8 +1,8 @@
 {
-  "name": "smhs-epf-faq",
-  "version": "2.1.1",
+  "name": "smhs-epf-faq-v3",
+  "version": "3.0.0",
   "main": "index.js",
-  "author": "pan93412 <pan93412@gmail.com>",
+  "author": "黃猷珵 <youualan87@gmail.com>",
   "contributors": [
     "youualan87 <youualan87@gmail.com>",
     "hugwalk <extended.wl@gmail.com>",
@@ -36,5 +36,7 @@
     "build": "webpack",
     "build:production": "webpack --mode=production",
     "serve:dev": "webpack-dev-server"
-  }
+  },
+  "description": "SMHS 學習歷程解疑網第三代的原始碼。",
+  "repository": "https://github.com/youualan87/smhs-epf-faq-v3.git"
 }
