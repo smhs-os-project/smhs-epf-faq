@@ -1,5 +1,10 @@
 @import 'variables.scss';
 
+/* General: 隱藏 */
+.hide {
+  display: none;
+}
+
 /* General: Section Title */
 .title.section-title {
   /* 這樣會變成「|  title」 */
@@ -131,4 +136,10 @@ html {
 /* announcements.pug: 置頂標籤 */
 .pin-tag {
   margin-right: 0.6rem;
+}
+
+/* index.pug: 調查通知 */
+.event-box {
+  border-radius: 20px;
+  background: url('https://img.imych.one/epf/assets/cover/events.png') no-repeat center scroll rgba(255, 255, 179, 0.8);
 }
