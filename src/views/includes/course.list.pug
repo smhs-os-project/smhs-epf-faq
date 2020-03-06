@@ -1,0 +1,33 @@
+//-
+  EPF下課程列表
+
+-
+mixin courseList_div
+  .notification
+    h3.title.is-3.section-title 課程列表
+    aside.menu 123
+      p.menu-label 123456
+      ul.menu-list
+        li 02.
+        li 5425
+          li 75257
+    
+
+//- mixin courseList_menu
+//-   aside.menu
+//-     p.menu-label 123456
+//-     ul.menu-list
+//-       li #[a(href='test') 123456] 123456
+//-       li #[a(href='test') 123456] 123456
+//-         li #[a(href='test') 123456] 123456
+    
+mixin courseList_epf
+  +courseList_div
+    //- +courseList_menu
+
+
+mixin courseList_doc
+  +courseList_div
+
+mixin courseList_school
+  +courseList_div
