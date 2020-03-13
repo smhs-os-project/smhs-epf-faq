@@ -60,6 +60,17 @@ html {
   // border-radius: 0 0 20px 20px;
   box-shadow: $navbar-box-shadow;
   background:url(https://img.imych.one/epf/assets/cover/geometric.png) center no-repeat scroll $navbar-main-color;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    background:url(https://img.imych.one/epf/assets/cover/geometric.png) center no-repeat scroll $navbar-main-color;
+    background-size: cover;
+  }
+  .navbar {
+    background:$navbar-main-color;
+  }
 }
 
 @media screen and (max-width: 1023px) {
