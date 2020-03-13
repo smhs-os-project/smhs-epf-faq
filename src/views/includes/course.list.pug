@@ -1,26 +1,9 @@
-//-
-  EPF下課程列表
+//- epf 下的課程列表
 
--
-mixin courseList_div
-  .notification
-    h3.title.is-3.section-title 課程列表
-    +courseList_menu
-
-mixin courseList_menu
+mixin courseListMenu(category)
+  h3.title.is-3.section-title 課程列表
   aside.menu.courseList
-    p.menu-label 圖片處理
+    p.menu-label= category
     ul.menu-list
-      li #[a(href='test') 壓縮圖片]
-      li #[a.is-active(href='test') 合併多張圖片]
-    
-mixin courseList_epf
-  +courseList_div
-    //- +courseList_menu
-
-
-mixin courseList_doc
-  +courseList_div
-
-mixin courseList_school
-  +courseList_div
+      li #[a(href='javascript:void(0)') 壓縮圖片]
+      li #[a.is-active(href='javascript:void(0)') 合併多張圖片]
