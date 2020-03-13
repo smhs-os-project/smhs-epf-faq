@@ -1,0 +1,14 @@
+include ../includes/article.include.pug
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+  body.has-navbar-fixed-top
+    +title('課程列表') //- 連同 title 標籤都會一起設定。
+    +top // Back to Top!
+
+    section.section
+      .container
+        +courseTitleBanner('課程列表')
+        +courseList_epf

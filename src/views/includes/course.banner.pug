@@ -1,5 +1,12 @@
-mixin courseBanner(title)
-  .notification.banner-cover
+mixin courseTitleBanner(title)
+  .notification.banner-cover#title
+    .banner-bg-cover
+      .banner-container.has-text-centered
+        .banner-title
+          h3.title.is-3 #{title}
+
+mixin courseCourseBanner(title)
+  .notification.banner-cover#course
     .banner-bg-cover
       .banner-container.has-text-centered
         .banner-title

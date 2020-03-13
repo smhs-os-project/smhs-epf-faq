@@ -167,6 +167,22 @@ html {
   background-size: cover;
   border-radius:5px 5px 0 0;
 }
+.container #title {
+  width:100%;
+  max-height:220px;
+  min-height:180px;
+  background:url(https://epf.imych.one/pages/assets/Cover/cover-2.jpg) center no-repeat scroll;
+  background-size: cover;
+  border-radius:5px 5px 0 0;
+}
+.column #course {
+  width:100%;
+  max-height:500px;
+  min-height:200px;
+  background:url(https://epf.imych.one/pages/assets/Cover/cover-4.jpg) center no-repeat scroll;
+  background-size: cover;
+  border-radius:5px 5px 0 0;
+}
 .banner-bg-cover {
   background:rgba(201,201,201,0.3);
   height:100%;
