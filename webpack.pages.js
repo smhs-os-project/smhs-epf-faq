@@ -32,6 +32,7 @@ module.exports = {
     { page: 'epf/request' }, // 學習歷程檔案 - 認證
     { page: 'epf/explain' }, // 多元表現說明
     { page: 'epf/others' }, // 其他資料用處
+    { page: 'doc/course' }, // 檔案類課程列表
     { page: 'doc/compress_pdf' }, // 文件掃描／轉檔 - 壓縮 PDF
     { page: 'doc/compress_img' }, // 文件掃描／轉檔 - 壓縮圖片
     { page: 'doc/concatenate_imgs' }, // 文件掃描／轉檔 - 合併多張圖片
