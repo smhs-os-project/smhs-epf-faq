@@ -45,9 +45,9 @@ meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學
     },
     '其他': {
       '關於': '/about.html',
-      '網站歷史': '/pages/History',
-      '問題詢問／錯誤回報': '/pages/Problems',
-      '網頁原始碼': 'https://github.com/smhs-os-project/smhs-epf-faq'
+      '網站歷史': '/history.html',
+      '問題詢問／錯誤回報': 'https://github.com/youualan87/smhs-epf-faq-v3',
+      '網頁原始碼': 'https://github.com/youualan87/smhs-epf-faq-v3'
     }
   }
 
@@ -86,31 +86,32 @@ mixin _addLinks(entry, url)
 mixin title(sectionName, shortName = sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
 
-  nav.navbar.is-fixed-top
-    .navbar-brand
-      a.navbar-item(href='/')
-        | #[img.logo(src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網#[span.navbar-page-title 【#{shortName}】]
-      a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-nav-toggle')
-        span(aria-hidden='true')
-        span(aria-hidden='true')
-        span(aria-hidden='true')
-    .navbar-menu#header-nav-toggle
-      .navbar-start
-        each val, key in navbarItem
-          if typeof val === 'object' && !(makeRight.includes(key))
-            .navbar-item.has-dropdown.is-hoverable
-              a.navbar-link= key
-              .navbar-dropdown
-                each url, entry in val
-                  +_addLinks(entry, url)
-          else if !(makeRight.includes(key))
-            +_addLinks(entry, url)
-          //- else 則到 navbar-end
-      .navbar-end
-        each val, key in navbarItem
-          if makeRight.includes(key)
-            .navbar-item.has-dropdown.is-hoverable
-              a.navbar-link= key
-              .navbar-dropdown.is-right
-                each url, entry in val
-                  +_addLinks(entry, url)
+  nav.navbar.is-fixed-top.is-centered
+    .container
+      .navbar-brand
+        a.navbar-item(href='/')
+          | #[img.logo(src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網#[span.navbar-page-title 【#{shortName}】]
+        a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='header-nav-toggle')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+      .navbar-menu#header-nav-toggle
+        .navbar-start
+          each val, key in navbarItem
+            if typeof val === 'object' && !(makeRight.includes(key))
+              .navbar-item.has-dropdown.is-hoverable
+                a.navbar-link= key
+                .navbar-dropdown
+                  each url, entry in val
+                    +_addLinks(entry, url)
+            else if !(makeRight.includes(key))
+              +_addLinks(entry, url)
+            //- else 則到 navbar-end
+        .navbar-end
+          each val, key in navbarItem
+            if makeRight.includes(key)
+              .navbar-item.has-dropdown.is-hoverable
+                a.navbar-link= key
+                .navbar-dropdown.is-right
+                  each url, entry in val
+                    +_addLinks(entry, url)
