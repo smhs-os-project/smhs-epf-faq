@@ -132,3 +132,73 @@ html {
 .pin-tag {
   margin-right: 0.6rem;
 }
+
+/* course.banner.pug: 自訂button顏色 */
+.custom-info {
+  color:#fff;
+  background-color:#17a2b8;
+  border-color:#17a2b8;
+}
+.custom-info:hover {
+  color:#fff;
+  background-color:#138496;
+  border-color:#117a8b;
+}
+.custom-info.focus,.custom-info:focus {
+  color:#fff;
+  box-shadow:0 0 0 .2rem rgba(58,176,195,.5);
+}
+.custom-info.disabled,.custom-info:disabled {
+  color:#fff;
+  background-color:#17a2b8;
+  border-color:#17a2b8;
+}
+.banner-cover {
+  padding:0;
+  width:100%;
+  min-height:200px;
+  max-height:280px;
+  background:url(https://epf.imych.one/pages/assets/Cover/cover-5.jpg) center no-repeat scroll;
+  background-size: cover;
+  border-radius:5px 5px 0 0;
+}
+.banner-bg-cover {
+  background:rgba(201,201,201,0.3);
+  height:100%;
+  min-height:200px;
+  max-height:280px;
+  padding:100px 0 100px 0;
+}
+.banner-title .is-3 {
+  text-shadow:0 0 2px #FFF, 0 0 2px #FFF, 0 0 2px #FFF;
+}
+.banner-container {
+  width:100%;
+}
+.banner-buttons, .banner-buttons .buttons {
+  width:100%;
+}
+// @media (max-width: 768px) {
+//   .banner-cover {
+//     min-height:200px;
+//     max-height:280px;
+//     background:url(https://epf.imych.one/pages/assets/Cover/cover-2.jpg) center no-repeat scroll;
+//     background-size: cover;
+//     border-radius:5px 5px 0 0;
+//   }
+//   .banner-bg-cover {
+//     background:rgba(201,201,201,0.3);
+//     height:100%;
+//     min-height:200px;
+//     max-height:280px;
+//     padding:100px 0 100px 0;
+//   }
+//   .banner-buttons {
+//     width:100%;
+//     align-content: center;
+//   }
+//   .banner-buttons .button {
+//     width:70%;
+//     display:block;
+//   }
+// }  
