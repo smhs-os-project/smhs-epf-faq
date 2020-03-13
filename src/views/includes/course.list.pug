@@ -5,21 +5,14 @@
 mixin courseList_div
   .notification
     h3.title.is-3.section-title 課程列表
-    aside.menu 123
-      p.menu-label 123456
-      ul.menu-list
-        li 02.
-        li 5425
-          li 75257
-    
+    +courseList_menu
 
-//- mixin courseList_menu
-//-   aside.menu
-//-     p.menu-label 123456
-//-     ul.menu-list
-//-       li #[a(href='test') 123456] 123456
-//-       li #[a(href='test') 123456] 123456
-//-         li #[a(href='test') 123456] 123456
+mixin courseList_menu
+  aside.menu.courseList
+    p.menu-label 圖片處理
+    ul.menu-list
+      li #[a(href='test') 壓縮圖片]
+      li #[a.is-active(href='test') 合併多張圖片]
     
 mixin courseList_epf
   +courseList_div
