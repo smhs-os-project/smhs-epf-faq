@@ -27,6 +27,7 @@ module.exports = {
       ]
     },
     { page: 'about' }, // About
+    { page: 'history' }, // History
     { page: 'epf/login' }, // 學習歷程檔案 - 登入
     { page: 'epf/upload' }, // 學習歷程檔案 - 上傳
     { page: 'epf/request' }, // 學習歷程檔案 - 認證
