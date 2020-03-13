@@ -85,7 +85,7 @@ mixin _addLinks(entry, url)
 mixin title(sectionName, shortName = sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
 
-  nav.navbar.web-navbar
+  nav.navbar.is-fixed-top
     .navbar-brand
       a.navbar-item(href='/')
         | #[img.logo(src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網#[span.navbar-page-title 【#{shortName}】]

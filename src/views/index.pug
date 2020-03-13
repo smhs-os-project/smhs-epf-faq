@@ -8,11 +8,21 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-  body
+  body.has-navbar-fixed-top
     +title('歡迎！', '歡迎')
     //- 連同 title 標籤都會一起設定。
     +top
     // Back to Top!
+
+    .container.hide#user-experience-box
+      .notification.alert-orange.has-text-centered.event-box
+        button.delete(data-close='#user-experience-box')
+        .content
+          | 嗨！#[a(href='https://epf.imych.one/') 學習歷程解疑網] 成立半年囉，
+          | 誠摯地邀請您一同進行 #[b.highlight #[a.is-blank(href='https://forms.gle/1uVEaLwsVximj9Z86') 用戶體驗回饋調查]]，
+          | 希望能提供您更好的瀏覽體驗。
+        .container
+          | #[a.button.is-warning.is-light.is-blank(href='https://forms.gle/1uVEaLwsVximj9Z86') 前往調查問卷]
 
     .section
       .container
