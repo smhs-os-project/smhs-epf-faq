@@ -36,7 +36,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'assets/others',
-          publicPath: '/assets/others'
+          publicPath: '/epf/assets/others/fonts'
         }
       },
       {
