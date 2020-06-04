@@ -1,5 +1,17 @@
 @import 'variables.scss';
 
+/* TopBar 元件區 */
+::-webkit-scrollbar-thumb, ::selection {
+  background: $main-color; 
+  color: #000;
+}
+.t-bar .t-content {
+  max-width: 1344px;
+}
+.t-bar .t-content a:hover {
+  color: $main-color;
+}
+
 /* General: 隱藏 */
 .hide {
   display: none;
@@ -63,6 +75,7 @@ html {
 */
 .navbar {
   border-radius: 0 0 20px 20px;
+  // top: ;
   box-shadow: $navbar-box-shadow;
 }
 
