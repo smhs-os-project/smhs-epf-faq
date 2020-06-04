@@ -14,6 +14,7 @@ link(rel="icon" type="image/png" href="https://me.imych.one/icon/favicon.ico")
 link(rel="Shortcut Icon" type="image/x-icon" href="https://me.imych.one/icon/favicon.ico")
 link(rel="apple-touch-icon" sizes="180x180" href="https://img.imych.one/me/images/youu.png")
 meta(name="author" content="高雄市立三民高中 黃猷珵 & pan93412 同學")
+script(src="https://code.jquery.com/jquery-1.12.0.min.js")
 
 // Google Analytics
 script(async src='https://www.googletagmanager.com/gtag/js?id=UA-155991333-1')
@@ -91,10 +92,12 @@ mixin _addLinks(entry, url)
 
   設定範例 SETTING EXAMPLES
       +title('Word/PPT 轉檔', '文件轉檔')
+script(src="https://img.imych.one/sw/templates/topbar.php")
+ 
 mixin title(sectionName, shortName = sectionName)
   title SMHS 學習歷程解疑網 - [#{sectionName}]
 
-  nav.navbar.is-fixed-top
+  nav.navbar.container.news-pt
     .navbar-brand
       a.navbar-item(href='/')
         | #[img.logo(src='/assets/smhs_logov2.webp' alt='SMHS')] 學習歷程解疑網#[span.navbar-page-title 【#{shortName}】]

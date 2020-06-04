@@ -16,7 +16,9 @@ module.exports = {
     // 回到 TOP 的 JS。預設引入。
     top: './src/js/top.js',
     // 關閉通知 JS。引入 index.pug 時請引入。
-    closeNotification: './src/js/closeNotification.js'
+    closeNotification: './src/js/closeNotification.js',
+    menu: './src/js/menu.js'
+    // 判斷選單位置並滑入 JS。預設引入。
   },
   // chunks 不必，也不要引入預設引入的項目。
   // 如果沒有須引入的 chunks，就不要加這項。
