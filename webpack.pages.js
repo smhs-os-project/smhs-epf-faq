@@ -32,6 +32,8 @@ module.exports = {
       ]
     },
     { page: 'about' }, // About
+    { page: 'expired' }, // Expired
+    { page: 'links' }, // Links
     { page: 'epf/login' }, // 學習歷程檔案 - 登入
     { page: 'epf/upload' }, // 學習歷程檔案 - 上傳
     { page: 'epf/request' }, // 學習歷程檔案 - 認證
