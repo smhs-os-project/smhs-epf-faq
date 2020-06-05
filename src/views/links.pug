@@ -1,0 +1,23 @@
+include includes/default.include.pug
+include includes/countdown.pug
+//- 公告
+//- include announcements.expired.pug
+
+doctype html
+
+html
+  head
+    meta(charset='UTF-8')
+  body
+    +title('相關網站', '網站')
+    //- 連同 title 標籤都會一起設定。
+    +top
+    // Back to Top!
+
+    .section
+      .container
+        .columns
+          .column.is-12
+            .container
+              h3.title.is-center 相關網站
+            //-   h4.subtitle.is-center 這裡是過期公告的放置處，#[a(href='/') 查看最新公告]
