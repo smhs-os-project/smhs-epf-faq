@@ -1,4 +1,17 @@
 @import 'variables.scss';
+@import url(//fonts.googleapis.com/earlyaccess/notosansthaana.css);
+
+/* Web Font*/
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 反白顏色 */
+::selection {
+  text-shadow: 2px 2px 8px #FFF;
+  background-color:$highliht-underline-color;
+  color:#000;
+}
 
 /* TopBar 元件區 */
 ::-webkit-scrollbar-thumb, ::selection {

@@ -33,8 +33,8 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "build": "webpack",
-    "build:production": "webpack --mode=production",
-    "serve:dev": "webpack-dev-server"
+    "build": "ytAPIToken=AIzaSyCnsDRA2UFhTEycYS1_4wKvwaTxNmZeb58 webpack",
+    "build:production": "ytAPIToken=AIzaSyCnsDRA2UFhTEycYS1_4wKvwaTxNmZeb58 webpack --mode=production",
+    "serve:dev": "ytAPIToken=AIzaSyCnsDRA2UFhTEycYS1_4wKvwaTxNmZeb58 webpack-dev-server"
   }
 }
