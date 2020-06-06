@@ -3,11 +3,10 @@
 
 -
   /*
-    第一層是 columns，第二層是 column。
     越新的應擺的越上面。過舊的可以刪除。
 
     格式 FORMAT
-      [[{
+      [{
         'title': '標題',
         'date': [年年年年, 月月, 日日],
         'content': '內文',
@@ -19,73 +18,65 @@
           }
         ],
         'pin': true // add 'pin' tag, optional.
-      }]]
+      }]
   */
-  // 第一層是 columns，第二層是 column。
-  // 請將較新的擺在上面。
-  //- 過舊的可以刪除。
   const announces = [
-    [
-
-      { // pin
-        'title': '108 第二學期上傳開始囉！',
-        'date': [2020, 03, 31],
-        'content': [
-          "系統已開放 <b class='highlight'>108學年度 第二學期的學習成果檔案</b> 上傳！（如附圖）<br>",
-          "第二學期 <b class='highlight'>上傳時間為：109/04/04～07/14</b>；",
-          " <b class='highlight'>認證時間為：109/04/15～07/14</b>"
-        ].join('\n'),
-        'footer': [
-          {
-            'name': '1082 上傳列表',
-            'href': '/assets/download/news/Snipaste_2020-03-20_21-24-46.png',
-            'isBlank': true
-          }
-        ],
-        'pin': true
-      }
-    ],
-    [
-      {
-        'title': '111學年度大學申請入學參採高中學習歷程資料完整版查詢系統',
-        'date': [2020, 05, 15],
-        'content': [
-          '<p>由 <a href="http://www.jbcrc.edu.tw/" target="_blank" rel="nofollow noopener noreferrer">聯招會</a>',
-          '在 109/5/15 最新公布的 「',
-          ' <a href="https://www.cac.edu.tw/cacportal/jbcrc/LearningPortfolios_MultiQuery/" target="_blank" rel="nofollow noopener noreferrer">111學年度大學申請入學參採高中學習歷程資料完整版查詢系統</a>',
-          ' 」中可以查詢到<span style="text-decoration: underline;">各校系最終定案的「大學端參採學習歷程項目」</span>。</p>',
-          '<hr><div class="notification is-warning is-light">參考資料：<a href="https://travel.imych.one/2020/05/125/108課綱-111學測高中學習歷程參採整理/" target="_blank">108課綱/111學測高中學習歷程參採整理</a></div>'
-        ].join(''),
-        'footer': [
-          {
-            'name': '大學申請入學統計資料.pdf',
-            'href': '/assets/download/111學年度大學申請入學統計表單0516(鳳山高中).pdf',
-            'isBlank': true
-          },
-          {
-            'name': '數A、數B差異.pdf',
-            'href': '/assets/download/1090515記者會手板-大學參採數學說明(確定板-含示例)(三民高中).pdf',
-            'isBlank': true
-          }
-        ]
-      },
-      {
-        'title': '龍騰文化－學習歷程特刊',
-        'date': [2020, 02, 11],
-        'content': [
-          '108年入學的學生，將逐年上傳學習歷程資料，',
-          '做為未來申請入學之用！<br>',
-          '附件資料擷取自龍騰文化網站 <a href="https://www.lungteng.com.tw/Web/messagelist.aspx?NEWS_ID=63" class="is-blank">學習歷程特刊</a>！'
-        ].join(''),
-        'footer': [
-          {
-            'name': '學習歷程特刊(精簡版).pdf',
-            'href': '/assets/download/學習歷程特刊-普高國文.pdf',
-            'isBlank': true
-          }
-        ]
-      }
-    ]
+    { // pin
+      'title': '108 第二學期上傳開始囉！',
+      'date': [2020, 03, 31],
+      'content': [
+        "系統已開放 <b class='highlight'>108學年度 第二學期的學習成果檔案</b> 上傳！（如附圖）<br>",
+        "第二學期 <b class='highlight'>上傳時間為：109/04/04～07/14</b>；",
+        " <b class='highlight'>認證時間為：109/04/15～07/14</b>"
+      ].join('\n'),
+      'footer': [
+        {
+          'name': '1082 上傳列表',
+          'href': '/assets/download/news/Snipaste_2020-03-20_21-24-46.png',
+          'isBlank': true
+        }
+      ],
+      'pin': true
+    },
+    {
+      'title': '111學年度大學申請入學參採高中學習歷程資料完整版查詢系統',
+      'date': [2020, 05, 15],
+      'content': [
+        '<p>由 <a href="http://www.jbcrc.edu.tw/" target="_blank" rel="nofollow noopener noreferrer">聯招會</a>',
+        '在 109/5/15 最新公布的 「',
+        ' <a href="https://www.cac.edu.tw/cacportal/jbcrc/LearningPortfolios_MultiQuery/" target="_blank" rel="nofollow noopener noreferrer">111學年度大學申請入學參採高中學習歷程資料完整版查詢系統</a>',
+        ' 」中可以查詢到<span style="text-decoration: underline;">各校系最終定案的「大學端參採學習歷程項目」</span>。</p>',
+        '<hr><div class="notification is-warning is-light">參考資料：<a href="https://travel.imych.one/2020/05/125/108課綱-111學測高中學習歷程參採整理/" target="_blank">108課綱/111學測高中學習歷程參採整理</a></div>'
+      ].join(''),
+      'footer': [
+        {
+          'name': '大學申請入學統計資料.pdf',
+          'href': '/assets/download/111學年度大學申請入學統計表單0516(鳳山高中).pdf',
+          'isBlank': true
+        },
+        {
+          'name': '數A、數B差異.pdf',
+          'href': '/assets/download/1090515記者會手板-大學參採數學說明(確定板-含示例)(三民高中).pdf',
+          'isBlank': true
+        }
+      ]
+    },
+    {
+      'title': '龍騰文化－學習歷程特刊',
+      'date': [2020, 02, 11],
+      'content': [
+        '108年入學的學生，將逐年上傳學習歷程資料，',
+        '做為未來申請入學之用！<br>',
+        '附件資料擷取自龍騰文化網站 <a href="https://www.lungteng.com.tw/Web/messagelist.aspx?NEWS_ID=63" class="is-blank">學習歷程特刊</a>！'
+      ].join(''),
+      'footer': [
+        {
+          'name': '學習歷程特刊(精簡版).pdf',
+          'href': '/assets/download/學習歷程特刊-普高國文.pdf',
+          'isBlank': true
+        }
+      ]
+    }
   ]
 
 //-
@@ -121,14 +112,12 @@ mixin makeAnnounceCard(title, date, content, footer = null, pin = false)
           a.card-footer-item(class=additionalClass href=item.href)= item.name
 
 mixin announceGenerator
-  each announceGroup in announces
-    .columns
-      each announce in announceGroup
-        .column
-          +makeAnnounceCard(
-            announce.title, announce.date,
-            announce.content, announce.footer,
-            announce.pin
-          )
-      if announceGroup.length < 2
-        .column
+  .columns.is-multiline
+    each announce in announces
+      .column.is-half
+        +makeAnnounceCard(
+          announce.title, announce.date,
+          announce.content, announce.footer,
+          announce.pin
+        )
+
