@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+// bulma: navbar
+$navbar-background-color: $navbar-main-color;
+$navbar-item-hover-background-color: $navbar-hover-color;
+$navbar-dropdown-background-color: $navbar-main-color;
+$navbar-dropdown-item-hover-background-color: $navbar-hover-color;
+
+// bulma: tag
+$tag-background-color: $main-color;
+
+// bulma: fonts
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "微軟正黑體", "Noto Sans CJK TC", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+@import '~bulma/bulma'

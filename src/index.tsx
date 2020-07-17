@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Loading from './comps/Loading';
+
+// style
+import './style/bulma.scss';
+import './style/style.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<Loading />}>
+      { /* TODO */ }
+      <Loading />
+    </Suspense>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
