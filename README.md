@@ -2,7 +2,7 @@
 ![畫面擷圖](https://user-images.githubusercontent.com/28441561/72662060-f7da5e00-3a1c-11ea-855a-20ac446c5da0.png)
 
 ## 回報錯誤
-[按一下這裡用 Google 表單回報錯誤](https://docs.google.com/forms/d/e/1FAIpQLScl0RVEabr0uaXxfPfCW_Jlz-Fd9MqUfXe0LXpvyeYW4syqeg/viewform)。當然，你也可以用上面的 GitHub Issues 回報。
+你可以用上面的 GitHub Issues 回報。
 
 ## 編譯說明
 ### Production
